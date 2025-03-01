@@ -15,13 +15,13 @@
 #' - La distribution des ages des elus sous forme de tibble,
 #' - Le nom, le prenom, la date de naissance et l'age de l’elu(e) le/la plus age(e), sous forme de tibble.
 #'
+#' @importFrom dplyr filter
+#'
 #' @examples
 #' # Exemples d'utilisation
 #'
 #'
 #' # Donnees (villes)
-#'
-#' data("df_Gers_Loire_Atlantique")
 #'
 #' df_Nantes <- df_Gers_Loire_Atlantique |>
 #'   filter(`Libellé de la commune` == "Nantes")

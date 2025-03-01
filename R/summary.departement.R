@@ -23,6 +23,8 @@
 #' - Les noms des communes avec la moyenne d’age la plus faible et la plus elevee,
 #'   ainsi que la distribution des ages des elus pour ces communes.
 #'
+#' @importFrom dplyr filter
+#'
 #' @examples
 #' # Exemples d'utilisation
 #'
@@ -37,8 +39,6 @@
 #'
 #'
 #' # Utilisation de la fonction
-#'
-#' data("df_Gers_Loire_Atlantique")
 #'
 #' summary.departement(df_Loire_Atlantique)
 #'

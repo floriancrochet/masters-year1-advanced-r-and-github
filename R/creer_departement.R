@@ -11,13 +11,13 @@
 #' @return Un objet de classe `departement` contenant les memes informations que le data frame d'entree, mais avec une nouvelle
 #' classe attribuee.
 #'
+#' @importFrom dplyr filter
+#'
 #' @examples
 #' # Exemples d'utilisation
 #'
 #'
 #' # Donnees (departements)
-#'
-#' data("df_Gers_Loire_Atlantique")
 #'
 #' df_Loire_Atlantique <- df_Gers_Loire_Atlantique |>
 #'   filter(`Libellé du département` == "Loire-Atlantique")

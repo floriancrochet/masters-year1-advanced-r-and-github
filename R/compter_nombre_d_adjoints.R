@@ -8,6 +8,7 @@
 #'
 #' @return Un entier représentant le nombre d'occurrences du mot "adjoint".
 #'
+#' @importFrom dplyr filter
 #' @importFrom stringr str_detect
 #'
 #' @examples
@@ -15,8 +16,6 @@
 #'
 #'
 #' # Donnees (villes ou departements)
-#'
-#' data("df_Gers_Loire_Atlantique")
 #'
 #' df_Nantes <- df_Gers_Loire_Atlantique |>
 #'   filter(`Libellé de la commune` == "Nantes")

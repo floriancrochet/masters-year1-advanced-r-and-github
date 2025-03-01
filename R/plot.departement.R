@@ -13,7 +13,7 @@
 #' @return Un graphique genere avec `ggplot2` representant la repartition des elus du departement par categorie socio-professionnelle.
 #' Il affiche les 10 categories socio-professionnelles les plus representees en fonction du nombre d'elus.
 #'
-#' @importFrom dplyr count arrange
+#' @importFrom dplyr filter count arrange
 #' @importFrom ggplot2 ggplot aes geom_bar labs theme_bw guides guide_legend
 #'
 #' @examples
@@ -21,8 +21,6 @@
 #'
 #'
 #' # Donnees (departements)
-#'
-#' data("df_Gers_Loire_Atlantique")
 #'
 #' df_Loire_Atlantique <- df_Gers_Loire_Atlantique |>
 #'   filter(`Libellé du département` == "Loire-Atlantique")

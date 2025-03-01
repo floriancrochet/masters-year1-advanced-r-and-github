@@ -13,7 +13,7 @@
 #' - `Date de naissance` : Date de naissance de l'elu le plus age.
 #' - `âge` : Age en annees de l'elu le plus age.
 #'
-#' @importFrom dplyr mutate slice select
+#' @importFrom dplyr filter mutate slice select
 #' @importFrom lubridate dmy
 #'
 #' @examples
@@ -21,8 +21,6 @@
 #'
 #'
 #' # Donnees (villes ou departements)
-#'
-#' data("df_Gers_Loire_Atlantique")
 #'
 #' df_Nantes <- df_Gers_Loire_Atlantique |>
 #'   filter(`Libellé de la commune` == "Nantes")

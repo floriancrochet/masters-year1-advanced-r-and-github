@@ -11,13 +11,13 @@
 #' @return Un objet de classe `commune` contenant les memes informations que le data frame d'entree, mais avec une nouvelle
 #' classe attribuee.
 #'
+#' @importFrom dplyr filter
+#'
 #' @examples
 #' # Exemples d'utilisation
 #'
 #'
 #' # Donnees (villes)
-#'
-#' data("df_Gers_Loire_Atlantique")
 #'
 #' df_Nantes <- df_Gers_Loire_Atlantique |>
 #'   filter(`Libellé de la commune` == "Nantes")

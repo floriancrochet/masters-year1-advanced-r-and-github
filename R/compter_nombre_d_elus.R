@@ -8,15 +8,13 @@
 #'
 #' @return Un entier représentant le nombre d'élus distincts dans le data frame.
 #'
-#' @importFrom dplyr select distinct
+#' @importFrom dplyr filter select distinct
 #'
 #' @examples
 #' # Exemples d'utilisation
 #'
 #'
 #' # Donnees (villes ou departements)
-#'
-#' data("df_Gers_Loire_Atlantique")
 #'
 #' df_Nantes <- df_Gers_Loire_Atlantique |>
 #'   filter(`Libellé de la commune` == "Nantes")

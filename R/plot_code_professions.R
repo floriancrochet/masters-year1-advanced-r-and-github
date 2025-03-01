@@ -9,7 +9,7 @@
 #' @return Un objet ggplot affichant un diagramme en barres de la distribution des elus
 #' par categorie socio-professionnelle.
 #'
-#' @importFrom dplyr count
+#' @importFrom dplyr filter count
 #' @importFrom ggplot2 ggplot aes geom_bar labs theme_bw
 #'
 #' @examples
@@ -17,8 +17,6 @@
 #'
 #'
 #' # Donnees (villes ou departements)
-#'
-#' data("df_Gers_Loire_Atlantique")
 #'
 #' df_Nantes <- df_Gers_Loire_Atlantique |>
 #'   filter(`Libellé de la commune` == "Nantes")

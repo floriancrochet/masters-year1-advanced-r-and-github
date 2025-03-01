@@ -18,7 +18,7 @@
 #' - `âge` : L'age calculé de l'elu,
 #' - `Libellé de la commune` : La commune a laquelle appartient l'elu.
 #'
-#' @importFrom dplyr mutate arrange slice n select
+#' @importFrom dplyr filter mutate arrange slice n select
 #' @importFrom lubridate dmy
 #'
 #' @examples
@@ -26,8 +26,6 @@
 #'
 #'
 #' # Donnees (villes ou departements)
-#'
-#' data("df_Gers_Loire_Atlantique")
 #'
 #' df_Nantes <- df_Gers_Loire_Atlantique |>
 #'   filter(`Libellé de la commune` == "Nantes")

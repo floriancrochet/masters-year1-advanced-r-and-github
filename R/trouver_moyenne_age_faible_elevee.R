@@ -15,7 +15,7 @@
 #' - `Libellé de la commune` : Le nom de la commune,
 #' - `Moyenne` : La moyenne d'age des elus dans la commune.
 #'
-#' @importFrom dplyr group_by group_split arrange slice bind_rows
+#' @importFrom dplyr filter group_by group_split arrange slice bind_rows
 #' @importFrom purrr map
 #'
 #' @examples
@@ -23,8 +23,6 @@
 #'
 #'
 #' # Donnees (villes ou departements)
-#'
-#' data("df_Gers_Loire_Atlantique")
 #'
 #' df_Nantes <- df_Gers_Loire_Atlantique |>
 #'   filter(`Libellé de la commune` == "Nantes")

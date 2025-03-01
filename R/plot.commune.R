@@ -13,7 +13,7 @@
 #' @return Un graphique genere avec `ggplot2` representant la repartition des elus de la commune par categorie socio-professionnelle.
 #' Il affiche les codes professionnels en x et le nombre d'elus par categorie sur l'axe y.
 #'
-#' @importFrom dplyr count
+#' @importFrom dplyr filter count
 #' @importFrom ggplot2 ggplot aes geom_bar labs theme_bw guides guide_legend
 #'
 #' @examples
@@ -21,8 +21,6 @@
 #'
 #'
 #' # Donnees (villes)
-#'
-#' data("df_Gers_Loire_Atlantique")
 #'
 #' df_Nantes <- df_Gers_Loire_Atlantique |>
 #'   filter(`Libellé de la commune` == "Nantes")

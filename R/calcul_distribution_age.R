@@ -13,6 +13,7 @@
 #' les statistiques d'age : minimum, premier quartile (Q1), mediane, moyenne,
 #' troisième quartile (Q3) et maximum.
 #'
+#' @importFrom dplyr filter
 #' @importFrom lubridate dmy
 #' @importFrom stats quantile
 #' @importFrom tibble tibble
@@ -22,8 +23,6 @@
 #'
 #'
 #' # Donnees (villes ou departements)
-#'
-#' data("df_Gers_Loire_Atlantique")
 #'
 #' df_Nantes <- df_Gers_Loire_Atlantique |>
 #'   filter(`Libellé de la commune` == "Nantes")

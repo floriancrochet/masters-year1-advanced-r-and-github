@@ -34,8 +34,6 @@ La fonction trie les elus par date de naissance et selectionne le premier et le 
 
 # Donnees (villes ou departements)
 
-data("df_Gers_Loire_Atlantique")
-
 df_Nantes <- df_Gers_Loire_Atlantique |>
   filter(`Libellé de la commune` == "Nantes")
 
