@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot_code_professions.R
 \name{plot_code_professions}
 \alias{plot_code_professions}
-\title{Visualiser la répartition des élus par catégorie socio-professionnelle}
+\title{Visualiser la repartition des elus par categorie socio-professionnelle}
 \usage{
 plot_code_professions(df)
 }
@@ -10,18 +10,18 @@ plot_code_professions(df)
 \item{df}{Un data frame contenant une colonne \verb{Code de la catégorie socio-professionnelle}.}
 }
 \value{
-Un objet ggplot affichant un diagramme en barres de la distribution des élus
-par catégorie socio-professionnelle.
+Un objet ggplot affichant un diagramme en barres de la distribution des elus
+par categorie socio-professionnelle.
 }
 \description{
-Cette fonction génère un graphique en barres représentant la répartition
-des élus selon leur catégorie socio-professionnelle.
+Cette fonction genere un graphique en barres representant la repartition
+des elus selon leur categorie socio-professionnelle.
 }
 \examples{
 # Exemples d'utilisation
 
 
-# Données (villes ou départements)
+# Donnees (villes ou departements)
 
 data("df_Gers_Loire_Atlantique")
 

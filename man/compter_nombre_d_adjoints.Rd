@@ -20,7 +20,7 @@ dans la colonne \verb{Libellé de la fonction} d'un data frame.
 # Exemples d'utilisation
 
 
-# Données (villes ou départements)
+# Donnees (villes ou departements)
 
 data("df_Gers_Loire_Atlantique")
 

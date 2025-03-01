@@ -2,28 +2,28 @@
 % Please edit documentation in R/creer_departement.R
 \name{creer_departement}
 \alias{creer_departement}
-\title{Créer un objet de classe 'departement' à partir d'un data frame}
+\title{Creer un objet de classe 'departement' a partir d'un data frame}
 \usage{
 creer_departement(df)
 }
 \arguments{
-\item{df}{Un data frame contenant des informations sur les élus d'un département. Le data frame doit inclure la colonne
+\item{df}{Un data frame contenant des informations sur les elus d'un departement. Le data frame doit inclure la colonne
 \verb{Code du département}.}
 }
 \value{
-Un objet de classe \code{departement} contenant les mêmes informations que le data frame d'entrée, mais avec une nouvelle
-classe attribuée.
+Un objet de classe \code{departement} contenant les memes informations que le data frame d'entree, mais avec une nouvelle
+classe attribuee.
 }
 \description{
-Cette fonction prend un data frame contenant des informations sur un département et valide que toutes les lignes correspondent
-à un seul département (en vérifiant que le \verb{Code du département} est unique). Elle transforme ensuite ce data frame en un objet de
-classe \code{departement} pour lui attribuer un comportement spécifique lors de son utilisation.
+Cette fonction prend un data frame contenant des informations sur un departement et valide que toutes les lignes correspondent
+a un seul departement (en verifiant que le \verb{Code du département} est unique). Elle transforme ensuite ce data frame en un objet de
+classe \code{departement} pour lui attribuer un comportement specifique lors de son utilisation.
 }
 \examples{
 # Exemples d'utilisation
 
 
-# Données (départements)
+# Donnees (departements)
 
 data("df_Gers_Loire_Atlantique")
 
