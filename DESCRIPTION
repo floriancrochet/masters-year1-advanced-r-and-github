@@ -1,0 +1,27 @@
+Package: firstlibFlorian
+Title: "Analyse et visualisation des données géographiques et démographiques des communes et départements"
+Version: 0.0.0.9000
+Authors@R: 
+    person("Florian", "Crochet", email = "8flocht8@gmail.com", role = c("aut", "cre"))
+Description:
+    "Ce package permet d'analyser et de visualiser des données géographiques et démographiques des communes et départements.
+    Il offre des résumés statistiques et permet de créer et manipuler des objets de classe `commune` ou `departement`.
+    Des fonctions de visualisation génèrent des graphiques pour explorer les caractéristiques des communes et départements."
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Depends: 
+    R (>= 3.5)
+LazyData: true
+Imports:
+    dplyr,
+    ggplot2,
+    lubridate,
+    purrr,
+    stats,
+    stringr,
+    tibble
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
