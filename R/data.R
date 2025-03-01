@@ -25,5 +25,4 @@
 #'   \item{Code nationalite}{Code de la nationalite de l'elu, sous forme de chaine de caracteres. Exemple : "FR" pour France, "US" pour les Etats-Unis, etc.}
 #' }
 #' @source <https://www.data.gouv.fr/fr/datasets/repertoire-national-des-elus-1/#/resources/d5f400de-ae3f-4966-8cb6-a85c70c6c24a>
-#' @export
 "df_Gers_Loire_Atlantique"
