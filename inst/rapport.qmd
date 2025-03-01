@@ -1,0 +1,125 @@
+---
+title: "Rapport"
+author: "Florian CROCHET"
+format:
+  html:
+    toc: true
+    toc-title: Sommaire
+    code-fold: true
+    echo: true
+    eval: true
+    incremental: true
+    fig-width: 10
+    fig-height: 8
+    fig-align: "center"
+  pdf:
+    toc: true
+    toc-title: Sommaire
+    code-fold: true
+    echo: true
+    eval: true
+    incremental: true
+    fig-width: 10
+    fig-height: 8
+  revealjs:
+    incremental: true
+    fig-width: 10
+    fig-height: 8
+params:
+  commune: 44109
+  departement: 44
+---
+
+### Chargement de la librairie et du data frame du package
+
+```{r}
+# Librairie
+library(firstlibFlorian)
+
+# Data frame
+data("df_Gers_Loire_Atlantique")
+
+head(df_Gers_Loire_Atlantique)
+```
+
+
+
+### Modification du code de manière à passer en paramètres le code commune et le code du département.
+
+```{r}
+# Fonction pour sélectionner une commune en utilisant son code commune
+# et associer la classe commune au data frame
+
+selection_commune <- function(df, code_commune) {
+  
+  if (!(code_commune %in% df$`Code de la commune`)) {
+    stop("Aucune commune trouvée avec ce code.")
+  }
+  
+  df |>
+    dplyr::filter(`Code de la commune` == code_commune) |> 
+    creer_commune()
+  
+}
+
+
+
+# Fonction pour sélectionner un département en utilisant son code département
+# et associer la classe departement au data frame
+
+selection_departement <- function(df, code_departement) {
+  
+  if (!(code_departement %in% df$`Code du département`)) {
+    stop("Aucun département trouvé avec ce code.")
+  }
+  
+  df |>
+    dplyr::filter(`Code du département` == code_departement) |>
+    creer_departement()
+}
+```
+
+
+
+### Commune de Nantes
+
+```{r}
+# Sélection de la commune de Nantes
+
+df_Nantes <- selection_commune(
+  df_Gers_Loire_Atlantique,
+  params$commune
+)
+```
+
+```{r}
+# Utilisation de la fonction summary et plot pour df_Nantes
+
+summary(df_Nantes)
+
+plot(df_Nantes)
+```
+
+
+
+### Département de Loire-Atlantique
+
+```{r}
+# Sélection du département de Loire-Atlantique
+
+df_Loire_Atlantique <- selection_departement(
+  df_Gers_Loire_Atlantique,
+  params$departement
+)
+```
+
+```{r}
+# Utilisation des fonctions summary et plot pour df_Loire_Atlantique
+
+summary(df_Loire_Atlantique)
+
+plot(df_Loire_Atlantique)
+```
+
+
+
