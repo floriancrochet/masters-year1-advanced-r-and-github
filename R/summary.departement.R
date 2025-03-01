@@ -38,6 +38,8 @@
 #'
 #' # Utilisation de la fonction
 #'
+#' data("df_Gers_Loire_Atlantique")
+#'
 #' summary.departement(df_Loire_Atlantique)
 #'
 #' summary.departement(df_Gers)

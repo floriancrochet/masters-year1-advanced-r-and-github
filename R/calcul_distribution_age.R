@@ -23,6 +23,8 @@
 #'
 #' # Données (villes ou départements)
 #'
+#' data("df_Gers_Loire_Atlantique")
+#'
 #' df_Nantes <- df_Gers_Loire_Atlantique |>
 #'   filter(`Libellé de la commune` == "Nantes")
 #'
