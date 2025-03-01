@@ -32,6 +32,8 @@ des élus, ainsi que le nom et l'âge de l'élu(e) le/la plus âgé(e).
 
 # Données (villes)
 
+data("df_Gers_Loire_Atlantique")
+
 df_Nantes <- df_Gers_Loire_Atlantique |>
   filter(`Libellé de la commune` == "Nantes")
 

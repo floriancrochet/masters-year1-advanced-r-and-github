@@ -25,6 +25,8 @@ classe \code{commune} pour lui attribuer un comportement spécifique lors de son
 
 # Données (villes)
 
+data("df_Gers_Loire_Atlantique")
+
 df_Nantes <- df_Gers_Loire_Atlantique |>
   filter(`Libellé de la commune` == "Nantes")
 

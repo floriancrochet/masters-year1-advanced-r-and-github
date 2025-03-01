@@ -27,17 +27,19 @@ en renvoyant des statistiques descriptives : minimum, quartiles, médiane, moyen
 
 # Données (villes ou départements)
 
+data("df_Gers_Loire_Atlantique")
+
 df_Nantes <- df_Gers_Loire_Atlantique |>
-  filter(`Libellé de la commune` == "Nantes")
+  dplyr::filter(`Libellé de la commune` == "Nantes")
 
 df_Aignan <- df_Gers_Loire_Atlantique |>
-  filter(`Libellé de la commune` == "Aignan")
+  dplyr::filter(`Libellé de la commune` == "Aignan")
 
 df_Loire_Atlantique <- df_Gers_Loire_Atlantique |>
-  filter(`Libellé du département` == "Loire-Atlantique")
+  dplyr::filter(`Libellé du département` == "Loire-Atlantique")
 
 df_Gers <- df_Gers_Loire_Atlantique |>
-  filter(`Libellé du département` == "Gers")
+  dplyr::filter(`Libellé du département` == "Gers")
 
 
 # Utilisation de la fonction

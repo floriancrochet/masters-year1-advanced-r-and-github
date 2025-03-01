@@ -28,6 +28,8 @@ Elle affiche les 10 catégories les plus représentées dans le département.
 
 # Données (départements)
 
+data("df_Gers_Loire_Atlantique")
+
 df_Loire_Atlantique <- df_Gers_Loire_Atlantique |>
   filter(`Libellé du département` == "Loire-Atlantique")
 
