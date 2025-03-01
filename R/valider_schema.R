@@ -1,24 +1,24 @@
-#' Valider le schéma des données d'un data frame
+#' Valider le schema des donnees d'un data frame
 #'
 #' @description
-#' Cette fonction vérifie que les colonnes du data frame sont conformes à un schéma prédéfini. Le schéma attendu inclut des colonnes spécifiques
-#' liées aux informations sur les élus, telles que le code et le libellé du département, le code sexe, les dates de naissance, et d'autres informations
-#' sur les élus et leurs fonctions.
+#' Cette fonction verifie que les colonnes du data frame sont conformes à un schema predefini. Le schema attendu inclut des colonnes specifiques
+#' liees aux informations sur les elus, telles que le code et le libelle du département, le code sexe, les dates de naissance, et d'autres informations
+#' sur les elus et leurs fonctions.
 #'
-#' @param df Un data frame contenant des informations sur les élus, qui doit avoir les colonnes suivantes :
+#' @param df Un data frame contenant des informations sur les elus, qui doit avoir les colonnes suivantes :
 #' `Code du département`, `Libellé du département`, `Code de la collectivité à statut particulier`,
 #' `Libellé de la collectivité à statut particulier`, `Code de la commune`, `Libellé de la commune`,
 #' `Nom de l'élu`, `Prénom de l'élu`, `Code sexe`, `Date de naissance`, `Code de la catégorie socio-professionnelle`,
 #' `Libellé de la catégorie socio-professionnelle`, `Date de début du mandat`, `Libellé de la fonction`,
 #' `Date de début de la fonction`, et `Code nationalité`.
 #'
-#' @return Aucun retour explicite. Si les colonnes du data frame ne correspondent pas au schéma, une erreur sera levée.
+#' @return Aucun retour explicite. Si les colonnes du data frame ne correspondent pas au schema, une erreur sera levee.
 #'
 #' @examples
 #' # Exemples d'utilisation
 #'
 #'
-#' # Données (villes ou départements)
+#' # Donnees (villes ou departements)
 #'
 #' data("df_Gers_Loire_Atlantique")
 #'

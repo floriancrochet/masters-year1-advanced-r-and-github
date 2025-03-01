@@ -1,19 +1,19 @@
-#' Trouver les communes avec la moyenne d'âge la plus faible et la plus élevée
+#' Trouver les communes avec la moyenne d'age la plus faible et la plus elevee
 #'
 #' @description
-#' Cette fonction permet de trouver les communes avec la moyenne d’âge des élus la plus faible
-#' et la plus élevée. Elle regroupe les données par commune, applique une fonction de calcul
-#' de la distribution des âges des élus à chaque groupe, puis sélectionne les communes avec
-#' les moyennes d'âge les plus basses et les plus élevées.
+#' Cette fonction permet de trouver les communes avec la moyenne d’age des elus la plus faible
+#' et la plus elevee. Elle regroupe les donnees par commune, applique une fonction de calcul
+#' de la distribution des ages des elus à chaque groupe, puis selectionne les communes avec
+#' les moyennes d'age les plus basses et les plus elevees.
 #'
-#' @param df Un data frame contenant les informations sur les élus,
-#' incluant les colonnes `Libellé de la commune` et les informations nécessaires
-#' pour calculer la moyenne d'âge des élus par commune.
+#' @param df Un data frame contenant les informations sur les elus,
+#' incluant les colonnes `Libellé de la commune` et les informations necessaires
+#' pour calculer la moyenne d'age des elus par commune.
 #'
-#' @return Un tibble contenant les informations des communes avec la moyenne d'âge
-#' la plus faible et la plus élevée. Les colonnes retournées incluent :
+#' @return Un tibble contenant les informations des communes avec la moyenne d'age
+#' la plus faible et la plus elevee. Les colonnes retournees incluent :
 #' - `Libellé de la commune` : Le nom de la commune,
-#' - `Moyenne` : La moyenne d'âge des élus dans la commune.
+#' - `Moyenne` : La moyenne d'age des elus dans la commune.
 #'
 #' @importFrom dplyr group_by group_split arrange slice bind_rows
 #' @importFrom purrr map
@@ -22,7 +22,7 @@
 #' # Exemples d'utilisation
 #'
 #'
-#' # Données (villes ou départements)
+#' # Donnees (villes ou departements)
 #'
 #' data("df_Gers_Loire_Atlantique")
 #'

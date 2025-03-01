@@ -1,21 +1,21 @@
-#' Créer un objet de classe 'commune' à partir d'un data frame
+#' Creer un objet de classe 'commune' a partir d'un data frame
 #'
 #' @description
 #' Cette fonction prend un data frame contenant des informations sur une commune et valide que toutes les lignes correspondent
-#' à une seule commune (en vérifiant que le `Code de la commune` est unique). Elle transforme ensuite ce data frame en un objet de
-#' classe `commune` pour lui attribuer un comportement spécifique lors de son utilisation.
+#' a une seule commune (en verifiant que le `Code de la commune` est unique). Elle transforme ensuite ce data frame en un objet de
+#' classe `commune` pour lui attribuer un comportement specifique lors de son utilisation.
 #'
-#' @param df Un data frame contenant des informations sur les élus d'une commune. Le data frame doit inclure la colonne
+#' @param df Un data frame contenant des informations sur les elus d'une commune. Le data frame doit inclure la colonne
 #' `Code de la commune`.
 #'
-#' @return Un objet de classe `commune` contenant les mêmes informations que le data frame d'entrée, mais avec une nouvelle
-#' classe attribuée.
+#' @return Un objet de classe `commune` contenant les memes informations que le data frame d'entree, mais avec une nouvelle
+#' classe attribuee.
 #'
 #' @examples
 #' # Exemples d'utilisation
 #'
 #'
-#' # Données (villes)
+#' # Donnees (villes)
 #'
 #' data("df_Gers_Loire_Atlantique")
 #'

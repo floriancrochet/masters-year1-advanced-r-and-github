@@ -14,7 +14,7 @@
 #' # Exemples d'utilisation
 #'
 #'
-#' # Données (villes ou départements)
+#' # Donnees (villes ou departements)
 #'
 #' data("df_Gers_Loire_Atlantique")
 #'

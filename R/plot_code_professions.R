@@ -1,13 +1,13 @@
-#' Visualiser la répartition des élus par catégorie socio-professionnelle
+#' Visualiser la repartition des elus par categorie socio-professionnelle
 #'
 #' @description
-#' Cette fonction génère un graphique en barres représentant la répartition
-#' des élus selon leur catégorie socio-professionnelle.
+#' Cette fonction genere un graphique en barres representant la repartition
+#' des elus selon leur categorie socio-professionnelle.
 #'
 #' @param df Un data frame contenant une colonne `Code de la catégorie socio-professionnelle`.
 #'
-#' @return Un objet ggplot affichant un diagramme en barres de la distribution des élus
-#' par catégorie socio-professionnelle.
+#' @return Un objet ggplot affichant un diagramme en barres de la distribution des elus
+#' par categorie socio-professionnelle.
 #'
 #' @importFrom dplyr count
 #' @importFrom ggplot2 ggplot aes geom_bar labs theme_bw
@@ -16,7 +16,7 @@
 #' # Exemples d'utilisation
 #'
 #'
-#' # Données (villes ou départements)
+#' # Donnees (villes ou departements)
 #'
 #' data("df_Gers_Loire_Atlantique")
 #'

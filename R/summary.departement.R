@@ -1,33 +1,33 @@
-#' Résumer les informations d'un département
+#' Resumer les informations d'un departement
 #'
 #' @description
-#' Cette fonction affiche un résumé des informations d'un département,
-#' notamment le nom du département, le nombre de communes, le nombre d'élus,
-#' la distribution des âges des élus, ainsi que le nom et l'âge de l'élu(e) le/la plus âgé(e)
-#' et de l'élu(e) le/la plus jeune. Elle affiche également les communes ayant la moyenne d’âge
-#' la plus faible et la plus élevée, avec la distribution des âges des élus pour ces communes.
+#' Cette fonction affiche un resume des informations d'un departement,
+#' notamment le nom du departement, le nombre de communes, le nombre d'elus,
+#' la distribution des ages des elus, ainsi que le nom et l'age de l'elu(e) le/la plus age(e)
+#' et de l'elu(e) le/la plus jeune. Elle affiche egalement les communes ayant la moyenne d’age
+#' la plus faible et la plus elevee, avec la distribution des ages des elus pour ces communes.
 #'
-#' @param df Un data frame contenant des informations sur les élus,
-#' incluant les colonnes `Libellé du département`, `Code de la commune`, et les informations nécessaires
-#' pour calculer la distribution des âges, trouver l’élu(e) le/la plus âgé(e) et le/la plus jeune,
-#' ainsi que la moyenne d’âge par commune.
-#' @param ... Arguments supplémentaires, non utilisés dans cette méthode.
+#' @param df Un data frame contenant des informations sur les elus,
+#' incluant les colonnes `Libellé du département`, `Code de la commune`, et les informations necessaires
+#' pour calculer la distribution des ages, trouver l’elu(e) le/la plus age(e) et le/la plus jeune,
+#' ainsi que la moyenne d’age par commune.
+#' @param ... Arguments supplementaires, non utilises dans cette methode.
 #'
 #' @return Aucun retour explicite. La fonction affiche dans la console :
-#' - Le nom du département,
-#' - Le nombre de communes dans le département,
-#' - Le nombre d’élus dans le département,
-#' - La distribution des âges des élus sous forme de tibble,
-#' - Le nom, le prénom, la date de naissance et l'âge de l’élu(e) le/la plus âgé(e),
-#'   ainsi que celui/ceux de l’élu(e) le/la plus jeune, sous forme de tibble,
-#' - Les noms des communes avec la moyenne d’âge la plus faible et la plus élevée,
-#'   ainsi que la distribution des âges des élus pour ces communes.
+#' - Le nom du departement,
+#' - Le nombre de communes dans le departement,
+#' - Le nombre d’elus dans le departement,
+#' - La distribution des ages des elus sous forme de tibble,
+#' - Le nom, le prenom, la date de naissance et l'age de l’elu(e) le/la plus age(e),
+#'   ainsi que celui/ceux de l’elu(e) le/la plus jeune, sous forme de tibble,
+#' - Les noms des communes avec la moyenne d’age la plus faible et la plus elevee,
+#'   ainsi que la distribution des ages des elus pour ces communes.
 #'
 #' @examples
 #' # Exemples d'utilisation
 #'
 #'
-#' # Données (départements)
+#' # Donnees (departements)
 #'
 #' df_Loire_Atlantique <- df_Gers_Loire_Atlantique |>
 #'   filter(`Libellé du département` == "Loire-Atlantique")

@@ -1,17 +1,17 @@
-#' Visualiser la répartition des élus par catégorie socio-professionnelle dans un département
+#' Visualiser la repartition des elus par categorie socio-professionnelle dans un departement
 #'
 #' @description
-#' Cette fonction génère un graphique montrant la répartition des élus d'un département par catégorie
-#' socio-professionnelle. Le graphique est un diagramme à barres, où l'axe des x représente les codes
-#' des catégories socio-professionnelles et l'axe des y le nombre d'élus dans chaque catégorie.
-#' Elle affiche les 10 catégories les plus représentées dans le département.
+#' Cette fonction genere un graphique montrant la repartition des elus d'un departement par categorie
+#' socio-professionnelle. Le graphique est un diagramme a barres, ou l'axe des x represente les codes
+#' des categories socio-professionnelles et l'axe des y le nombre d'elus dans chaque categorie.
+#' Elle affiche les 10 categories les plus representees dans le departement.
 #'
-#' @param df Un data frame contenant des informations sur les élus, incluant les colonnes `Code de la catégorie socio-professionnelle`,
+#' @param df Un data frame contenant des informations sur les elus, incluant les colonnes `Code de la catégorie socio-professionnelle`,
 #' `Libellé de la catégorie socio-professionnelle`, `Libellé du département`, et `Code de la commune`.
-#' @param ... Arguments supplémentaires, non utilisés dans cette méthode.
+#' @param ... Arguments supplementaires, non utilises dans cette methode.
 #'
-#' @return Un graphique généré avec `ggplot2` représentant la répartition des élus du département par catégorie socio-professionnelle.
-#' Il affiche les 10 catégories socio-professionnelles les plus représentées en fonction du nombre d'élus.
+#' @return Un graphique genere avec `ggplot2` representant la repartition des elus du departement par categorie socio-professionnelle.
+#' Il affiche les 10 categories socio-professionnelles les plus representees en fonction du nombre d'elus.
 #'
 #' @importFrom dplyr count arrange
 #' @importFrom ggplot2 ggplot aes geom_bar labs theme_bw guides guide_legend
@@ -20,7 +20,7 @@
 #' # Exemples d'utilisation
 #'
 #'
-#' # Données (départements)
+#' # Donnees (departements)
 #'
 #' data("df_Gers_Loire_Atlantique")
 #'

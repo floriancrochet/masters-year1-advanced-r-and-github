@@ -1,16 +1,16 @@
-#' Calculer la distribution des âges
+#' Calculer la distribution des ages
 #'
 #' @description
-#' Cette fonction calcule la distribution des âges des individus d'un data frame
-#' en renvoyant des statistiques descriptives : minimum, quartiles, médiane, moyenne et maximum.
+#' Cette fonction calcule la distribution des ages des individus d'un data frame
+#' en renvoyant des statistiques descriptives : minimum, quartiles, mediane, moyenne et maximum.
 #'
 #' @param df Un data frame contenant une colonne `Date de naissance` et
 #' une colonne `Libellé de la commune` ou `Libellé du département`.
 #'
-#' @param ... Paramètres supplémentaires (non utilisés directement dans cette fonction).
+#' @param ... Parametres supplementaires (non utilises directement dans cette fonction).
 #'
-#' @return Un tibble contenant le nom de la commune ou du département, ainsi que
-#' les statistiques d'âge : minimum, premier quartile (Q1), médiane, moyenne,
+#' @return Un tibble contenant le nom de la commune ou du departement, ainsi que
+#' les statistiques d'age : minimum, premier quartile (Q1), mediane, moyenne,
 #' troisième quartile (Q3) et maximum.
 #'
 #' @importFrom lubridate dmy
@@ -21,7 +21,7 @@
 #' # Exemples d'utilisation
 #'
 #'
-#' # Données (villes ou départements)
+#' # Donnees (villes ou departements)
 #'
 #' data("df_Gers_Loire_Atlantique")
 #'
