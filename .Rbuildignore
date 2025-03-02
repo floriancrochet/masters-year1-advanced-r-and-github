@@ -3,3 +3,4 @@
 ^firstlibFlorian\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
+^vignettes/*_files$
