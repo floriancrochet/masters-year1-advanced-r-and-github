@@ -21,23 +21,33 @@
 
 
 generer_rapport <- function(commune, departement, output) {
+  
   # Vérifier si Quarto est installé et accessible
   if (system("which quarto", intern = TRUE) == "") {
     stop("Quarto n'est pas installé ou accessible dans le système.")
   }
-
+  
   # Générer le rapport avec Quarto
-  command <- paste("quarto render rapport.qmd -P commune:", commune, " -P departement:", departement, sep = "")
-  system(command)
-
+  chemin_qmd <- system.file("rapport.qmd", package = "firstlibFlorian")
+  
+  # Vérifier si le fichier .qmd existe
+  if (chemin_qmd == "") {
+    stop("Le fichier rapport.qmd est introuvable dans le package.")
+  }
+  
+  # Exécuter la commande system pour générer le rapport
+  system("quarto render inst/rapport.qmd -P code_commune:commune -P code_departement:departement")
+  
   # Vérifier si le fichier rapport.html a bien été généré
-  chemin_actuel <- "rapport.html"
-  if (!file.exists(chemin_actuel)) {
+  chemin_html <- system.file("rapport.html", package = "firstlibFlorian")
+  
+  if (!file.exists(chemin_html)) {
     stop("Le fichier rapport.html n'a pas été généré.")
   }
-
+  
+  
   # Déplacer le fichier généré vers le nouveau chemin
-  if (file.rename(chemin_actuel, output)) {
+  if (file.rename(chemin_html, output)) {
     message("Le fichier a été déplacé avec succès vers ", output)
   } else {
     stop("Erreur lors du déplacement du fichier.")
