@@ -10,6 +10,8 @@
 #'
 #' @return Aucun retour explicite. Le fichier `rapport.html` est généré et déplacé vers le chemin spécifié.
 #'
+#' @import quarto
+#'
 #' @examples
 #' # Utilisation de la fonction pour générer un rapport pour la commune de Nantes (44109) et le département de Loire-Atlantique (44)
 #'
