@@ -1,0 +1,17 @@
+# _pkgdown.yml
+
+# Configuration de base
+url: https://flo-1-618.github.io/firstlibFlorian/
+template:
+  bootstrap: 5
+
+navbar:
+  structure:
+    - text: "Description"
+      href: inst/description.html
+    - text: "Vignette"
+      href: doc/firstlibFlorian.html
+    - text: "Fonctions"
+      href: inst/fonctions.html
+    - text: "Rapport"
+      href: inst/rapport.html

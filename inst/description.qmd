@@ -1,0 +1,62 @@
+---
+title: "Bienvenue dans la documentation de firstlibFlorian"
+format: html
+---
+
+# Description du package
+
+## Informations générales
+
+- **Nom du package** : `firstlibFlorian`  
+- **Titre** : Analyse et visualisation des données géographiques et démographiques des communes et départements  
+- **Version** : 0.0.0.9000  
+- **Auteur** : Florian Crochet  
+- **Licence** : GPL-3  
+- **URL** : [https://flo-1-618.github.io/firstlibFlorian/](https://flo-1-618.github.io/firstlibFlorian/)  
+
+## Fonctionnalités
+
+Ce package permet d’analyser et de visualiser des **données géographiques et démographiques** des communes et départements.
+
+Il offre plusieurs outils pour :  
+
+- Générer des **résumés statistiques** sur les communes et départements  
+- Créer et manipuler des objets de classe **`commune`** et **`departement`**  
+- Produire des **visualisations graphiques** pour explorer ces données  
+
+## Dépendances principales
+
+Le package nécessite plusieurs bibliothèques populaires en R :
+
+- **Manipulation de données** : `dplyr`, `tibble`, `stringr`, `purrr`  
+- **Visualisation** : `ggplot2`  
+- **Gestion des dates** : `lubridate`  
+- **Autres** : `stats`, `quarto`  
+
+## Packages suggérés
+
+Le package recommande également des packages pour des fonctionnalités supplémentaires :
+
+- `knitr`
+- `rmarkdown`
+- `testthat` (>= 3.0.0)
+
+## Fonctionnalités principales
+
+Les principales fonctions du package sont les suivantes :
+
+- `creer_commune()` : Créer un objet de classe `commune`.
+- `creer_departement()` : Créer un objet de classe `departement`.
+- `generer_rapport()` : Générer un rapport statistique pour un objet `commune` ou `departement`.
+- `plot.commune()` : Visualiser les données géographiques d'une commune.
+- `plot.departement()` : Visualiser les données géographiques d'un département.
+- `summary.commune()` : Résumé statistique d'un objet `commune`.
+- `summary.departement()` : Résumé statistique d'un objet `departement`.
+
+## Installation
+
+Pour installer le package depuis GitHub :  
+
+```{r}
+# install.packages("devtools")
+devtools::install_github("flo-1-618/firstlibFlorian")
