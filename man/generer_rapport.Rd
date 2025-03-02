@@ -2,32 +2,27 @@
 % Please edit documentation in R/generer_rapport.R
 \name{generer_rapport}
 \alias{generer_rapport}
-\title{Générer un rapport personnalisé pour une commune et un département}
+\title{Générer un rapport Quarto et le déplacer vers un chemin spécifié}
 \usage{
 generer_rapport(commune, departement, output)
 }
 \arguments{
-\item{commune}{Un entier spécifiant le code INSEE ou postal de la commune pour laquelle le rapport sera généré.}
+\item{commune}{Un entier représentant le numéro de la commune à inclure dans le rapport.}
 
-\item{departement}{Un entier spécifiant le code du département pour lequel le rapport sera généré.}
+\item{departement}{Un entier représentant le numéro du département à inclure dans le rapport.}
 
-\item{output}{Le chemin de sortie où le fichier généré (par exemple, PDF) sera enregistré. Ce doit être un
-chemin de fichier valide.}
+\item{output}{Une chaîne de caractères représentant le chemin de destination où le fichier rapport doit être déplacé. Le fichier généré sera déplacé vers ce chemin sous le nom de \code{rapport.html}.}
 }
 \value{
-Aucun retour explicite. Le rapport est généré et enregistré à l'emplacement spécifié dans \code{output}.
+Aucun retour explicite. Le fichier \code{rapport.html} est généré et déplacé vers le chemin spécifié.
 }
 \description{
-Cette fonction génère un rapport personnalisé au format PDF en utilisant un fichier Quarto (.qmd).
-Elle prend en paramètre les informations sur la commune (identifiée par son code) et le département
-(identifié par son code) et génère un rapport en utilisant un modèle défini dans le fichier \code{rapport.qmd}
-situé dans le dossier \code{inst} du package.
+Cette fonction génère un rapport Quarto en utilisant les paramètres \code{commune} et \code{departement} spécifiés.
+Après la génération, le fichier \code{rapport.html} est déplacé vers le chemin de destination spécifié par l'utilisateur.
 }
 \examples{
-# Exemple d'utilisation pour générer un rapport pour Nantes (commune 44109) et Loire-Atlantique (département 44)
-generer_rapport(commune = 44109, departement = 44, output = "rapport_nantes.pdf")
+# Utilisation de la fonction pour générer un rapport pour la commune de Nantes (44109) et le département de Loire-Atlantique (44)
 
-# Exemple avec un autre département et commune
-generer_rapport(commune = 75056, departement = 75, output = "rapport_paris.pdf")
+generer_rapport(44109, 44, "<votre chemin>/rapport_final.html")
 
 }
