@@ -41,15 +41,15 @@ Cette fonction affiche un résumé des informations d'une commune,notamment le n
 
 
 ### Paramètres
-*df* Un data frame contenant des informations sur les élus d'une commune,incluant les colonnes `Libellé de la commune` et `Date de naissance`.
-*...* Arguments supplémentaires, non utilisés dans cette méthode.
+**df** Un data frame contenant des informations sur les élus d'une commune,incluant les colonnes `Libellé de la commune` et `Date de naissance`.  
+**...** Arguments supplémentaires, non utilisés dans cette méthode.
 
 
 ### Retour
-Aucun retour explicite. La fonction affiche dans la console :
-- Le nom de la commune,
-- Le nombre d’élus,
-- La distribution des âges des élus sous forme de tibble,
+Aucun retour explicite. La fonction affiche dans la console :  
+- Le nom de la commune,  
+- Le nombre d’élus,  
+- La distribution des âges des élus sous forme de tibble,  
 - Le nom, le prénom, la date de naissance et l'âge de l’élu(e) le/la plus âgé(e), sous forme de tibble.
 
 
@@ -90,21 +90,19 @@ Cette fonction affiche un résumé des informations d'un département,notamment 
 
 ### Paramètres
 
-*df* Un data frame contenant des informations sur les élus, incluant les colonnes `Libellé du département`, `Code de la commune`, et les informations nécessaires pour calculer la distribution des âges, trouver l’élu(e) le/la plus âgé(e) et le/la plus jeune, ainsi que la moyenne d’âge par commune.
-*...* Arguments supplémentaires, non utilisés dans cette méthode.
+**df** Un data frame contenant des informations sur les élus, incluant les colonnes `Libellé du département`, `Code de la commune`, et les informations nécessaires pour calculer la distribution des âges, trouver l’élu(e) le/la plus âgé(e) et le/la plus jeune, ainsi que la moyenne d’âge par commune.  
+**...** Arguments supplémentaires, non utilisés dans cette méthode.
 
 
 ### Retour
 
-Aucun retour explicite. La fonction affiche dans la console :
-- Le nom du département,
-- Le nombre de communes dans le département,
-- Le nombre d’élus dans le département,
-- La distribution des âges des élus sous forme de tibble,
-- Le nom, le prénom, la date de naissance et l'âge de l’élu(e) le/la plus âgé(e),
-  ainsi que celui/ceux de l’élu(e) le/la plus jeune, sous forme de tibble,
-- Les noms des communes avec la moyenne d’âge la plus faible et la plus élevée,
-  ainsi que la distribution des âges des élus pour ces communes.
+Aucun retour explicite. La fonction affiche dans la console :  
+- Le nom du département,  
+- Le nombre de communes dans le département,  
+- Le nombre d’élus dans le département,  
+- La distribution des âges des élus sous forme de tibble,  
+- Le nom, le prénom, la date de naissance et l'âge de l’élu(e) le/la plus âgé(e), ainsi que celui/ceux de l’élu(e) le/la plus jeune, sous forme de tibble,  
+- Les noms des communes avec la moyenne d’âge la plus faible et la plus élevée, ainsi que la distribution des âges des élus pour ces communes.
 
 
 ### Exemples d'utilisation
@@ -139,15 +137,15 @@ summary(df_Gers)
 
 ### Description
 
-Cette fonction génère un rapport Quarto en utilisant les paramètres `commune` et `departement` spécifiés.
+Cette fonction génère un rapport Quarto en utilisant les paramètres `commune` et `departement` spécifiés.  
 Après la génération, le fichier `rapport.html` est déplacé vers le chemin de destination spécifié par l'utilisateur.
 
 
 ### Paramètres
 
-*commune* Un entier représentant le numéro de la commune à inclure dans le rapport.
-*departement* Un entier représentant le numéro du département à inclure dans le rapport.
-*output* Une chaîne de caractères représentant le chemin de destination où le fichier rapport doit être déplacé. Le fichier généré sera déplacé vers ce chemin sous le nom de `rapport.html`.
+**commune** Un entier représentant le numéro de la commune à inclure dans le rapport.  
+**departement** Un entier représentant le numéro du département à inclure dans le rapport.  
+**output** Une chaîne de caractères représentant le chemin de destination où le fichier rapport doit être déplacé. Le fichier généré sera déplacé vers ce chemin sous le nom de `rapport.html`.
 
 
 ### Retour

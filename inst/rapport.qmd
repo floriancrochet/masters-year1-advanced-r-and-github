@@ -9,8 +9,8 @@ format:
     echo: true
     eval: true
     incremental: true
-    fig-width: 12
-    fig-height: 8
+    fig-width: 14
+    fig-height: 10
     fig-align: "center"
   pdf:
     toc: true
@@ -19,12 +19,12 @@ format:
     echo: true
     eval: true
     incremental: true
-    fig-width: 12
-    fig-height: 8
+    fig-width: 14
+    fig-height: 10
   revealjs:
     incremental: true
-    fig-width: 12
-    fig-height: 8
+    fig-width: 14
+    fig-height: 10
 params:
   commune: 44109
   departement: 44
@@ -41,7 +41,6 @@ data("df_Gers_Loire_Atlantique")
 
 # head(df_Gers_Loire_Atlantique)
 ```
-
 
 
 ### Modification du code de manière à passer en paramètres le code commune et le code du département.
@@ -80,7 +79,6 @@ selection_departement <- function(df, code_departement) {
 ```
 
 
-
 ### Commune de Nantes
 
 ```{r}
@@ -101,7 +99,6 @@ plot(df_Nantes)
 ```
 
 
-
 ### Département de Loire-Atlantique
 
 ```{r}
@@ -120,6 +117,3 @@ summary(df_Loire_Atlantique)
 
 plot(df_Loire_Atlantique)
 ```
-
-
-
