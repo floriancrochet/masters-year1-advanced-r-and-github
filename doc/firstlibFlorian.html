@@ -113,9 +113,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; }
 <h3 id="description">Description</h3>
 <p>Cette fonction affiche un résumé des informations d’une commune,notamment le nom de la commune, le nombre d’élus, la distribution des âgesdes élus, ainsi que le nom et l’âge de l’élu(e) le/la plus âgé(e).</p>
 <h3 id="paramètres">Paramètres</h3>
-<p><em>df</em> Un data frame contenant des informations sur les élus d’une commune,incluant les colonnes <code>Libellé de la commune</code> et <code>Date de naissance</code>. <em>…</em> Arguments supplémentaires, non utilisés dans cette méthode.</p>
+<p><strong>df</strong> Un data frame contenant des informations sur les élus d’une commune,incluant les colonnes <code>Libellé de la commune</code> et <code>Date de naissance</code>.<br>
+<strong>…</strong> Arguments supplémentaires, non utilisés dans cette méthode.</p>
 <h3 id="retour">Retour</h3>
-<p>Aucun retour explicite. La fonction affiche dans la console : - Le nom de la commune, - Le nombre d’élus, - La distribution des âges des élus sous forme de tibble, - Le nom, le prénom, la date de naissance et l’âge de l’élu(e) le/la plus âgé(e), sous forme de tibble.</p>
+<p>Aucun retour explicite. La fonction affiche dans la console :<br>
+- Le nom de la commune,<br>
+- Le nombre d’élus,<br>
+- La distribution des âges des élus sous forme de tibble,<br>
+- Le nom, le prénom, la date de naissance et l’âge de l’élu(e) le/la plus âgé(e), sous forme de tibble.</p>
 <h3 id="exemples-dutilisation">Exemples d’utilisation</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Données (villes)</span></span>
@@ -174,9 +179,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; }
 <h3 id="description-1">Description</h3>
 <p>Cette fonction affiche un résumé des informations d’un département,notamment le nom du département, le nombre de communes, le nombre d’élus,la distribution des âges des élus, ainsi que le nom et l’âge de l’élu(e) le/la plus âgé(e) et de l’élu(e) le/la plus jeune. Elle affiche également les communes ayant la moyenne d’âge la plus faible et la plus élevée, avec la distribution des âges des élus pour ces communes.</p>
 <h3 id="paramètres-1">Paramètres</h3>
-<p><em>df</em> Un data frame contenant des informations sur les élus, incluant les colonnes <code>Libellé du département</code>, <code>Code de la commune</code>, et les informations nécessaires pour calculer la distribution des âges, trouver l’élu(e) le/la plus âgé(e) et le/la plus jeune, ainsi que la moyenne d’âge par commune. <em>…</em> Arguments supplémentaires, non utilisés dans cette méthode.</p>
+<p><strong>df</strong> Un data frame contenant des informations sur les élus, incluant les colonnes <code>Libellé du département</code>, <code>Code de la commune</code>, et les informations nécessaires pour calculer la distribution des âges, trouver l’élu(e) le/la plus âgé(e) et le/la plus jeune, ainsi que la moyenne d’âge par commune.<br>
+<strong>…</strong> Arguments supplémentaires, non utilisés dans cette méthode.</p>
 <h3 id="retour-1">Retour</h3>
-<p>Aucun retour explicite. La fonction affiche dans la console : - Le nom du département, - Le nombre de communes dans le département, - Le nombre d’élus dans le département, - La distribution des âges des élus sous forme de tibble, - Le nom, le prénom, la date de naissance et l’âge de l’élu(e) le/la plus âgé(e), ainsi que celui/ceux de l’élu(e) le/la plus jeune, sous forme de tibble, - Les noms des communes avec la moyenne d’âge la plus faible et la plus élevée, ainsi que la distribution des âges des élus pour ces communes.</p>
+<p>Aucun retour explicite. La fonction affiche dans la console :<br>
+- Le nom du département,<br>
+- Le nombre de communes dans le département,<br>
+- Le nombre d’élus dans le département,<br>
+- La distribution des âges des élus sous forme de tibble,<br>
+- Le nom, le prénom, la date de naissance et l’âge de l’élu(e) le/la plus âgé(e), ainsi que celui/ceux de l’élu(e) le/la plus jeune, sous forme de tibble,<br>
+- Les noms des communes avec la moyenne d’âge la plus faible et la plus élevée, ainsi que la distribution des âges des élus pour ces communes.</p>
 <h3 id="exemples-dutilisation-1">Exemples d’utilisation</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Données (départements)</span></span>
@@ -278,9 +290,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; }
 </div>
 <h3 id="exemple-dutilisation-de-la-fonction-generer_rapport">Exemple d’utilisation de la fonction <code>generer_rapport</code> :</h3>
 <h3 id="description-2">Description</h3>
-<p>Cette fonction génère un rapport Quarto en utilisant les paramètres <code>commune</code> et <code>departement</code> spécifiés. Après la génération, le fichier <code>rapport.html</code> est déplacé vers le chemin de destination spécifié par l’utilisateur.</p>
+<p>Cette fonction génère un rapport Quarto en utilisant les paramètres <code>commune</code> et <code>departement</code> spécifiés.<br>
+Après la génération, le fichier <code>rapport.html</code> est déplacé vers le chemin de destination spécifié par l’utilisateur.</p>
 <h3 id="paramètres-2">Paramètres</h3>
-<p><em>commune</em> Un entier représentant le numéro de la commune à inclure dans le rapport. <em>departement</em> Un entier représentant le numéro du département à inclure dans le rapport. <em>output</em> Une chaîne de caractères représentant le chemin de destination où le fichier rapport doit être déplacé. Le fichier généré sera déplacé vers ce chemin sous le nom de <code>rapport.html</code>.</p>
+<p><strong>commune</strong> Un entier représentant le numéro de la commune à inclure dans le rapport.<br>
+<strong>departement</strong> Un entier représentant le numéro du département à inclure dans le rapport.<br>
+<strong>output</strong> Une chaîne de caractères représentant le chemin de destination où le fichier rapport doit être déplacé. Le fichier généré sera déplacé vers ce chemin sous le nom de <code>rapport.html</code>.</p>
 <h3 id="retour-2">Retour</h3>
 <p>Aucun retour explicite. Le fichier <code>rapport.html</code> est généré et déplacé vers le chemin spécifié.</p>
 <h3 id="exemples-dutilisation-2">Exemples d’utilisation</h3>
