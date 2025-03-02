@@ -16,6 +16,8 @@
 #'
 #' @importFrom dplyr filter
 #'
+#' @keywords internal
+#'
 #' @examples
 #' # Exemples d'utilisation
 #'

@@ -45,3 +45,4 @@ compter_nombre_d_adjoints(df_Loire_Atlantique)
 
 compter_nombre_d_adjoints(df_Gers)
 }
+\keyword{internal}

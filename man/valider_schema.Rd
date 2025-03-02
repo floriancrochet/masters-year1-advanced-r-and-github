@@ -53,3 +53,4 @@ valider_schema(df_Gers)
 
 valider_schema(df_Gers_Loire_Atlantique)
 }
+\keyword{internal}

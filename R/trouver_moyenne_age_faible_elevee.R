@@ -18,6 +18,8 @@
 #' @importFrom dplyr filter group_by group_split arrange slice bind_rows
 #' @importFrom purrr map
 #'
+#' @keywords internal
+#'
 #' @examples
 #' # Exemples d'utilisation
 #'

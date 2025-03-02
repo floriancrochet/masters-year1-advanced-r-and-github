@@ -10,6 +10,8 @@
 #'
 #' @importFrom dplyr filter select distinct
 #'
+#' @keywords internal
+#'
 #' @examples
 #' # Exemples d'utilisation
 #'

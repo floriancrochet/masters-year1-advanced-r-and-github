@@ -11,6 +11,8 @@
 #' @importFrom dplyr filter
 #' @importFrom stringr str_detect
 #'
+#' @keywords internal
+#'
 #' @examples
 #' # Exemples d'utilisation
 #'

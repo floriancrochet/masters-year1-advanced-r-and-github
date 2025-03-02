@@ -52,3 +52,4 @@ trouver_l'élu_le_plus_âgé(df_Loire_Atlantique)
 
 trouver_l'élu_le_plus_âgé(df_Gers)
 }
+\keyword{internal}

@@ -46,3 +46,4 @@ plot_code_professions(df_Loire_Atlantique)
 
 plot_code_professions(df_Gers)
 }
+\keyword{internal}

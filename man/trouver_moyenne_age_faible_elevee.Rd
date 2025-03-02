@@ -54,3 +54,4 @@ trouver_moyenne_age_faible_elevee(df_Loire_Atlantique)
 
 trouver_moyenne_age_faible_elevee(df_Gers)
 }
+\keyword{internal}

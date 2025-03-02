@@ -16,6 +16,8 @@
 #' @importFrom dplyr filter mutate slice select
 #' @importFrom lubridate dmy
 #'
+#' @keywords internal
+#'
 #' @examples
 #' # Exemples d'utilisation
 #'

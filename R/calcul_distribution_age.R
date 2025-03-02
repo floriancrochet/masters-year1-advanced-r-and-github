@@ -18,6 +18,8 @@
 #' @importFrom stats quantile
 #' @importFrom tibble tibble
 #'
+#' @keywords internal
+#'
 #' @examples
 #' # Exemples d'utilisation
 #'

@@ -50,3 +50,4 @@ calcul_distribution_age(df_Loire_Atlantique)
 
 calcul_distribution_age(df_Gers)
 }
+\keyword{internal}

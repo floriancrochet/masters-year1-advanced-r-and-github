@@ -12,6 +12,8 @@
 #' @importFrom dplyr filter count
 #' @importFrom ggplot2 ggplot aes geom_bar labs theme_bw
 #'
+#' @keywords internal
+#'
 #' @examples
 #' # Exemples d'utilisation
 #'
