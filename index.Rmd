@@ -1,0 +1,24 @@
+---
+title: "Bienvenue dans la documentation de mon package"
+output: pkgdown::html_document
+---
+
+# Description du package
+
+Voici les informations principales de mon package :
+
+- **Package**: `firstlibFlorian`
+- **Title**: "Analyse et visualisation des données géographiques et démographiques des communes et départements"
+- **Version**: 0.0.0.9000
+- **Authors**: Florian Crochet
+- **Email**: [8flocht8@gmail.com](mailto:8flocht8@gmail.com)
+- **Description**: 
+  Ce package permet d'analyser et de visualiser des données géographiques et démographiques des communes et départements. 
+  Il offre des résumés statistiques et permet de créer et manipuler des objets de classe `commune` ou `departement`. 
+  Des fonctions de visualisation génèrent des graphiques pour explorer les caractéristiques des communes et départements.
+- **License**: GPL-3
+- **URL**: [https://flo-1-618.github.io/firstlibFlorian/](https://flo-1-618.github.io/firstlibFlorian/)
+
+## Fonctionnalités
+
+Le package fournit des fonctions pour la manipulation et la visualisation des données des communes et départements. Vous pouvez consulter les vignettes et la documentation des fonctions pour plus de détails.
