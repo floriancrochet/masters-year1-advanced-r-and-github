@@ -101,27 +101,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; }
 </header>
 
 
-<h2 id="chargement-de-la-librairie">Chargement de la librairie</h2>
+<h3 id="chargement-de-la-librairie">Chargement de la librairie</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(firstlibFlorian)</span></code></pre></div>
 </div>
-<h2 id="introduction">Introduction</h2>
+<h3 id="introduction">Introduction</h3>
 <p>Cette vignette présente l’utilisation des fonctions <code>summary.commune</code>, <code>summary.departement</code> et <code>generer_rapport</code> pour créer des rapports détaillés sur les communes et départements. Ces fonctions permettent d’extraire et de résumer des informations clés, telles que le nom de la commune, le nombre d’élus, la répartition des âges des élus, ainsi que l’identification de l’élu(e) le/la plus âgé(e) et le/la plus jeune.</p>
 <p>De plus, elles fournissent une vue d’ensemble des données démographiques au niveau du département, y compris la distribution des âges des élus dans les communes les plus jeunes et les plus âgées.</p>
 <p>Enfin, la fonction <code>generer_rapport</code> génère un rapport Quarto complet, puis le déplace automatiquement vers le chemin de destination choisi par l’utilisateur.</p>
-<h2 id="utilisation-de-la-fonction-summary.commune">Utilisation de la fonction <code>summary.commune</code></h2>
-<h3 id="description">Description</h3>
+<h3 id="utilisation-de-la-fonction-summary.commune">Utilisation de la fonction <code>summary.commune</code></h3>
+<h5 id="description">Description</h5>
 <p>Cette fonction affiche un résumé des informations d’une commune,notamment le nom de la commune, le nombre d’élus, la distribution des âgesdes élus, ainsi que le nom et l’âge de l’élu(e) le/la plus âgé(e).</p>
-<h3 id="paramètres">Paramètres</h3>
+<h5 id="paramètres">Paramètres</h5>
 <p><strong>df</strong> Un data frame contenant des informations sur les élus d’une commune,incluant les colonnes <code>Libellé de la commune</code> et <code>Date de naissance</code>.<br>
 <strong>…</strong> Arguments supplémentaires, non utilisés dans cette méthode.</p>
-<h3 id="retour">Retour</h3>
+<h5 id="retour">Retour</h5>
 <p>Aucun retour explicite. La fonction affiche dans la console :<br>
 - Le nom de la commune,<br>
 - Le nombre d’élus,<br>
 - La distribution des âges des élus sous forme de tibble,<br>
 - Le nom, le prénom, la date de naissance et l’âge de l’élu(e) le/la plus âgé(e), sous forme de tibble.</p>
-<h3 id="exemples-dutilisation">Exemples d’utilisation</h3>
+<h5 id="exemples-dutilisation">Exemples d’utilisation</h5>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Données (villes)</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -175,13 +175,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; }
 <span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;chr&gt;          &lt;chr&gt;             &lt;date&gt;              &lt;dbl&gt;</span></span>
 <span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 TOUJA          Noemie            1989-02-25             36</span></span></code></pre></div>
 </div>
-<h2 id="utilisation-de-la-fonction-summary.departement">Utilisation de la fonction <code>summary.departement</code></h2>
-<h3 id="description-1">Description</h3>
+<h3 id="utilisation-de-la-fonction-summary.departement">Utilisation de la fonction <code>summary.departement</code></h3>
+<h5 id="description-1">Description</h5>
 <p>Cette fonction affiche un résumé des informations d’un département,notamment le nom du département, le nombre de communes, le nombre d’élus,la distribution des âges des élus, ainsi que le nom et l’âge de l’élu(e) le/la plus âgé(e) et de l’élu(e) le/la plus jeune. Elle affiche également les communes ayant la moyenne d’âge la plus faible et la plus élevée, avec la distribution des âges des élus pour ces communes.</p>
-<h3 id="paramètres-1">Paramètres</h3>
+<h5 id="paramètres-1">Paramètres</h5>
 <p><strong>df</strong> Un data frame contenant des informations sur les élus, incluant les colonnes <code>Libellé du département</code>, <code>Code de la commune</code>, et les informations nécessaires pour calculer la distribution des âges, trouver l’élu(e) le/la plus âgé(e) et le/la plus jeune, ainsi que la moyenne d’âge par commune.<br>
 <strong>…</strong> Arguments supplémentaires, non utilisés dans cette méthode.</p>
-<h3 id="retour-1">Retour</h3>
+<h5 id="retour-1">Retour</h5>
 <p>Aucun retour explicite. La fonction affiche dans la console :<br>
 - Le nom du département,<br>
 - Le nombre de communes dans le département,<br>
@@ -189,7 +189,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; }
 - La distribution des âges des élus sous forme de tibble,<br>
 - Le nom, le prénom, la date de naissance et l’âge de l’élu(e) le/la plus âgé(e), ainsi que celui/ceux de l’élu(e) le/la plus jeune, sous forme de tibble,<br>
 - Les noms des communes avec la moyenne d’âge la plus faible et la plus élevée, ainsi que la distribution des âges des élus pour ces communes.</p>
-<h3 id="exemples-dutilisation-1">Exemples d’utilisation</h3>
+<h5 id="exemples-dutilisation-1">Exemples d’utilisation</h5>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Données (départements)</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -289,22 +289,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; }
 <span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; </span></span></code></pre></div>
 </div>
 <h3 id="exemple-dutilisation-de-la-fonction-generer_rapport">Exemple d’utilisation de la fonction <code>generer_rapport</code> :</h3>
-<h3 id="description-2">Description</h3>
+<h5 id="description-2">Description</h5>
 <p>Cette fonction génère un rapport Quarto en utilisant les paramètres <code>commune</code> et <code>departement</code> spécifiés.<br>
 Après la génération, le fichier <code>rapport.html</code> est déplacé vers le chemin de destination spécifié par l’utilisateur.</p>
-<h3 id="paramètres-2">Paramètres</h3>
+<h5 id="paramètres-2">Paramètres</h5>
 <p><strong>commune</strong> Un entier représentant le numéro de la commune à inclure dans le rapport.<br>
 <strong>departement</strong> Un entier représentant le numéro du département à inclure dans le rapport.<br>
 <strong>output</strong> Une chaîne de caractères représentant le chemin de destination où le fichier rapport doit être déplacé. Le fichier généré sera déplacé vers ce chemin sous le nom de <code>rapport.html</code>.</p>
-<h3 id="retour-2">Retour</h3>
+<h5 id="retour-2">Retour</h5>
 <p>Aucun retour explicite. Le fichier <code>rapport.html</code> est généré et déplacé vers le chemin spécifié.</p>
-<h3 id="exemples-dutilisation-2">Exemples d’utilisation</h3>
+<h5 id="exemples-dutilisation-2">Exemples d’utilisation</h5>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Utilisation de la fonction pour générer un rapport pour la commune de Nantes (44109) et le département de Loire-Atlantique (44)</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># generer_rapport(44109, 44, &quot;&lt;votre chemin&gt;/&lt;nom du fichier&gt;.html&quot;)</span></span></code></pre></div>
 </div>
-<h2 id="conclusion">Conclusion</h2>
+<h3 id="conclusion">Conclusion</h3>
 <p>Grâce à l’utilisation des fonctions <code>summary.commune</code>, <code>summary.departement</code> et <code>generer_rapport</code>, il est désormais possible de générer des rapports détaillés sur les communes et départements. Ces outils permettent une analyse approfondie des données démographiques des élus, en offrant une vue d’ensemble claire et concise des informations clés, telles que la répartition des âges et l’identification des élus les plus âgés et les plus jeunes.</p>
 <p>La fonction <code>generer_rapport</code> simplifie le processus de génération et de déplacement des rapports Quarto, facilitant ainsi leur diffusion et leur utilisation. En combinant ces fonctions, vous pouvez obtenir des rapports bien structurés et informatifs qui vous aident à mieux comprendre les tendances démographiques au sein des communes et départements.</p>
 

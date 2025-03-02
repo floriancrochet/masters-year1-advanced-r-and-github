@@ -1,6 +1,5 @@
 ---
 title: "Générer un rapport d'analyses"
-output: quarto::html_vignette
 vignette: >
   %\VignetteIndexEntry{Générer un rapport d'analyses}
   %\VignetteEngine{quarto::html}
@@ -16,7 +15,7 @@ knitr::opts_chunk$set(
 
 
 
-## Chargement de la librairie
+### Chargement de la librairie
 
 ```{r setup}
 library(firstlibFlorian)
@@ -24,7 +23,7 @@ library(firstlibFlorian)
 
 
 
-## Introduction
+### Introduction
 
 Cette vignette présente l'utilisation des fonctions `summary.commune`, `summary.departement` et `generer_rapport` pour créer des rapports détaillés sur les communes et départements. Ces fonctions permettent d'extraire et de résumer des informations clés, telles que le nom de la commune, le nombre d'élus, la répartition des âges des élus, ainsi que l'identification de l'élu(e) le/la plus âgé(e) et le/la plus jeune. 
 
@@ -34,18 +33,18 @@ Enfin, la fonction `generer_rapport` génère un rapport Quarto complet, puis le
 
 
 
-## Utilisation de la fonction `summary.commune`
+### Utilisation de la fonction `summary.commune`
 
-### Description
+##### Description
 Cette fonction affiche un résumé des informations d'une commune,notamment le nom de la commune, le nombre d'élus, la distribution des âgesdes élus, ainsi que le nom et l'âge de l'élu(e) le/la plus âgé(e).
 
 
-### Paramètres
+##### Paramètres
 **df** Un data frame contenant des informations sur les élus d'une commune,incluant les colonnes `Libellé de la commune` et `Date de naissance`.  
 **...** Arguments supplémentaires, non utilisés dans cette méthode.
 
 
-### Retour
+##### Retour
 Aucun retour explicite. La fonction affiche dans la console :  
 - Le nom de la commune,  
 - Le nombre d’élus,  
@@ -53,7 +52,7 @@ Aucun retour explicite. La fonction affiche dans la console :
 - Le nom, le prénom, la date de naissance et l'âge de l’élu(e) le/la plus âgé(e), sous forme de tibble.
 
 
-### Exemples d'utilisation
+##### Exemples d'utilisation
 
 ```{r}
 # Données (villes)
@@ -81,20 +80,20 @@ summary(df_Aignan)
 
 
 
-## Utilisation de la fonction `summary.departement`
+### Utilisation de la fonction `summary.departement`
 
-### Description
+##### Description
 
 Cette fonction affiche un résumé des informations d'un département,notamment le nom du département, le nombre de communes, le nombre d'élus,la distribution des âges des élus, ainsi que le nom et l'âge de l'élu(e) le/la plus âgé(e) et de l'élu(e) le/la plus jeune. Elle affiche également les communes ayant la moyenne d’âge la plus faible et la plus élevée, avec la distribution des âges des élus pour ces communes.
 
 
-### Paramètres
+##### Paramètres
 
 **df** Un data frame contenant des informations sur les élus, incluant les colonnes `Libellé du département`, `Code de la commune`, et les informations nécessaires pour calculer la distribution des âges, trouver l’élu(e) le/la plus âgé(e) et le/la plus jeune, ainsi que la moyenne d’âge par commune.  
 **...** Arguments supplémentaires, non utilisés dans cette méthode.
 
 
-### Retour
+##### Retour
 
 Aucun retour explicite. La fonction affiche dans la console :  
 - Le nom du département,  
@@ -105,7 +104,7 @@ Aucun retour explicite. La fonction affiche dans la console :
 - Les noms des communes avec la moyenne d’âge la plus faible et la plus élevée, ainsi que la distribution des âges des élus pour ces communes.
 
 
-### Exemples d'utilisation
+##### Exemples d'utilisation
 
 ```{r}
 # Données (départements)
@@ -135,25 +134,25 @@ summary(df_Gers)
 
 ### Exemple d'utilisation de la fonction `generer_rapport` :
 
-### Description
+##### Description
 
 Cette fonction génère un rapport Quarto en utilisant les paramètres `commune` et `departement` spécifiés.  
 Après la génération, le fichier `rapport.html` est déplacé vers le chemin de destination spécifié par l'utilisateur.
 
 
-### Paramètres
+##### Paramètres
 
 **commune** Un entier représentant le numéro de la commune à inclure dans le rapport.  
 **departement** Un entier représentant le numéro du département à inclure dans le rapport.  
 **output** Une chaîne de caractères représentant le chemin de destination où le fichier rapport doit être déplacé. Le fichier généré sera déplacé vers ce chemin sous le nom de `rapport.html`.
 
 
-### Retour
+##### Retour
 
 Aucun retour explicite. Le fichier `rapport.html` est généré et déplacé vers le chemin spécifié.
 
 
-### Exemples d'utilisation
+##### Exemples d'utilisation
 
 ```{r}
 # Utilisation de la fonction pour générer un rapport pour la commune de Nantes (44109) et le département de Loire-Atlantique (44)
@@ -163,7 +162,7 @@ Aucun retour explicite. Le fichier `rapport.html` est généré et déplacé ver
 
 
 
-## Conclusion
+### Conclusion
 
 Grâce à l'utilisation des fonctions `summary.commune`, `summary.departement` et `generer_rapport`, il est désormais possible de générer des rapports détaillés sur les communes et départements. Ces outils permettent une analyse approfondie des données démographiques des élus, en offrant une vue d'ensemble claire et concise des informations clés, telles que la répartition des âges et l'identification des élus les plus âgés et les plus jeunes. 
 
