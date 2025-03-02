@@ -1,19 +1,19 @@
-#' Resumer les informations d'une commune
+#' Résumer les informations d'une commune
 #'
 #' @description
-#' Cette fonction affiche un resume des informations d'une commune,
-#' notamment le nom de la commune, le nombre d'elus, la distribution des ages
-#' des elus, ainsi que le nom et l'age de l'elu(e) le/la plus age(e).
+#' Cette fonction affiche un résumé des informations d'une commune,
+#' notamment le nom de la commune, le nombre d'élus, la distribution des âges
+#' des élus, ainsi que le nom et l'âge de l'élu(e) le/la plus âgé(e).
 #'
-#' @param df Un data frame contenant des informations sur les elus d'une commune,
+#' @param df Un data frame contenant des informations sur les élus d'une commune,
 #' incluant les colonnes `Libellé de la commune` et `Date de naissance`.
-#' @param ... Arguments supplementaires, non utilises dans cette methode.
+#' @param ... Arguments supplémentaires, non utilisés dans cette méthode.
 #'
 #' @return Aucun retour explicite. La fonction affiche dans la console :
 #' - Le nom de la commune,
-#' - Le nombre d’elus,
-#' - La distribution des ages des elus sous forme de tibble,
-#' - Le nom, le prenom, la date de naissance et l'age de l’elu(e) le/la plus age(e), sous forme de tibble.
+#' - Le nombre d’élus,
+#' - La distribution des âges des élus sous forme de tibble,
+#' - Le nom, le prénom, la date de naissance et l'âge de l’élu(e) le/la plus âgé(e), sous forme de tibble.
 #'
 #' @importFrom dplyr filter
 #'
@@ -21,13 +21,20 @@
 #' # Exemples d'utilisation
 #'
 #'
-#' # Donnees (villes)
+#' # Données (villes)
 #'
 #' df_Nantes <- df_Gers_Loire_Atlantique |>
 #'   filter(`Libellé de la commune` == "Nantes")
 #'
 #' df_Aignan <- df_Gers_Loire_Atlantique |>
 #'   filter(`Libellé de la commune` == "Aignan")
+#'
+#'
+#' # Data frames appartenant à la classe commune
+#'
+#' df_Nantes <- structure(df_Nantes, class = c("commune", class(df_Nantes)))
+#'
+#' df_Aignan <- structure(df_Aignan, class = c("commune", class(df_Aignan)))
 #'
 #'
 #' # Utilisation de la fonction

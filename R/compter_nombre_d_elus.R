@@ -1,7 +1,7 @@
-#' Compter le nombre d'elus
+#' Compter le nombre d'élus
 #'
 #' @description
-#' Cette fonction compte le nombre d'elus distincts dans un data frame en se basant
+#' Cette fonction compte le nombre d'élus distincts dans un data frame en se basant
 #' sur les colonnes `Nom de l'élu`, `Prénom de l'élu`, et `Date de naissance`.
 #'
 #' @param df Un data frame contenant les colonnes `Nom de l'élu`, `Prénom de l'élu`, et `Date de naissance` (type `character` pour les deux premières et `Date` pour la dernière).
@@ -14,7 +14,7 @@
 #' # Exemples d'utilisation
 #'
 #'
-#' # Donnees (villes ou departements)
+#' # Données (villes ou départements)
 #'
 #' df_Nantes <- df_Gers_Loire_Atlantique |>
 #'   filter(`Libellé de la commune` == "Nantes")
@@ -38,6 +38,7 @@
 #' compter_nombre_d_elus(df_Loire_Atlantique)
 #'
 #' compter_nombre_d_elus(df_Gers)
+
 
 
 compter_nombre_d_elus <- function(df) {

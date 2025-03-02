@@ -1,22 +1,22 @@
-#' Trouver l'elu(e) le plus age(e) et le/la plus jeune
+#' Trouver l'élu(e) le plus âgé(e) et le/la plus jeune
 #'
 #' @description
-#' Cette fonction permet de trouver l'elu(e) le plus age(e) et le/la plus jeune
-#' dans un data frame d'elus. Elle calcule l'age des elus a partir de leur date de naissance,
-#' puis retourne les informations concernant l'elu(e) le/la plus age(e) et le/la plus jeune.
-#' La fonction trie les elus par date de naissance et selectionne le premier et le dernier elu.
+#' Cette fonction permet de trouver l'élu(e) le plus âgé(e) et le/la plus jeune
+#' dans un data frame d'élus. Elle calcule l'âge des élus à partir de leur date de naissance,
+#' puis retourne les informations concernant l'élu(e) le/la plus âgé(e) et le/la plus jeune.
+#' La fonction trie les élus par date de naissance et sélectionne le premier et le dernier élu.
 #'
-#' @param df Un data frame contenant les informations sur les elus,
+#' @param df Un data frame contenant les informations sur les élus,
 #' incluant les colonnes `Nom de l'élu`, `Prénom de l'élu`, `Date de naissance`,
 #' et `Libellé de la commune`.
 #'
-#' @return Un tibble avec les informations de l'elu(e) le/la plus age(e)
-#' et de l'elu(e) le/la plus jeune. Les colonnes retournees incluent :
-#' - `Nom de l'élu` : Le nom de l'elu,
-#' - `Prénom de l'élu` : Le prenom de l'elu,
-#' - `Date de naissance` : La date de naissance de l'elu,
-#' - `âge` : L'age calculé de l'elu,
-#' - `Libellé de la commune` : La commune a laquelle appartient l'elu.
+#' @return Un tibble avec les informations de l'élu(e) le/la plus âgé(e)
+#' et de l'élu(e) le/la plus jeune. Les colonnes retournées incluent :
+#' - `Nom de l'élu` : Le nom de l'élu,
+#' - `Prénom de l'élu` : Le prénom de l'élu,
+#' - `Date de naissance` : La date de naissance de l'élu,
+#' - `âge` : L'âge calculé de l'élu,
+#' - `Libellé de la commune` : La commune à laquelle appartient l'élu.
 #'
 #' @importFrom dplyr filter mutate arrange slice n select
 #' @importFrom lubridate dmy
@@ -25,7 +25,7 @@
 #' # Exemples d'utilisation
 #'
 #'
-#' # Donnees (villes ou departements)
+#' # Données (villes ou départements)
 #'
 #' df_Nantes <- df_Gers_Loire_Atlantique |>
 #'   filter(`Libellé de la commune` == "Nantes")

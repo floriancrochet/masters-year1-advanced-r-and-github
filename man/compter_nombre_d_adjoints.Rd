@@ -20,7 +20,7 @@ dans la colonne \verb{Libellé de la fonction} d'un data frame.
 # Exemples d'utilisation
 
 
-# Donnees (villes ou departements)
+# Données (villes ou départements)
 
 df_Nantes <- df_Gers_Loire_Atlantique |>
   filter(`Libellé de la commune` == "Nantes")

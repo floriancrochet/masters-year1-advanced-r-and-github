@@ -2,37 +2,44 @@
 % Please edit documentation in R/plot.commune.R
 \name{plot.commune}
 \alias{plot.commune}
-\title{Visualiser la repartition des elus par categorie socio-professionnelle dans une commune}
+\title{Visualiser la répartition des élus par catégorie socio-professionnelle dans une commune}
 \usage{
 \method{plot}{commune}(df, ...)
 }
 \arguments{
-\item{df}{Un data frame contenant des informations sur les elus, incluant les colonnes \verb{Code de la catégorie socio-professionnelle},
+\item{df}{Un data frame contenant des informations sur les élus, incluant les colonnes \verb{Code de la catégorie socio-professionnelle},
 \verb{Libellé de la catégorie socio-professionnelle}, \verb{Libellé de la commune} et \verb{Libellé du département}.}
 
-\item{...}{Arguments supplementaires, non utilises dans cette methode.}
+\item{...}{Arguments supplémentaires, non utilisés dans cette méthode.}
 }
 \value{
-Un graphique genere avec \code{ggplot2} representant la repartition des elus de la commune par categorie socio-professionnelle.
-Il affiche les codes professionnels en x et le nombre d'elus par categorie sur l'axe y.
+Un graphique généré avec \code{ggplot2} représentant la répartition des élus de la commune par catégorie socio-professionnelle.
+Il affiche les codes professionnels en x et le nombre d'élus par catégorie sur l'axe y.
 }
 \description{
-Cette fonction genere un graphique montrant la repartition des elus d'une commune par categorie
-socio-professionnelle. Le graphique est un diagramme a barres, ou l'axe des x represente les codes
-des categories socio-professionnelles et l'axe des y le nombre d'elus dans chaque categorie.
-La fonction utilise \code{ggplot2} pour afficher les resultats.
+Cette fonction génère un graphique montrant la répartition des élus d'une commune par catégorie
+socio-professionnelle. Le graphique est un diagramme à barres, où l'axe des x représente les codes
+des catégories socio-professionnelles et l'axe des y le nombre d'élus dans chaque catégorie.
+La fonction utilise \code{ggplot2} pour afficher les résultats.
 }
 \examples{
 # Exemples d'utilisation
 
 
-# Donnees (villes)
+# Données (villes)
 
 df_Nantes <- df_Gers_Loire_Atlantique |>
   filter(`Libellé de la commune` == "Nantes")
 
 df_Aignan <- df_Gers_Loire_Atlantique |>
   filter(`Libellé de la commune` == "Aignan")
+
+
+# Data frames appartenant à la classe commune
+
+df_Nantes <- structure(df_Nantes, class = c("commune", class(df_Nantes)))
+
+df_Aignan <- structure(df_Aignan, class = c("commune", class(df_Aignan)))
 
 
 # Utilisation de la fonction

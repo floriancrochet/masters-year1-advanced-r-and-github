@@ -2,37 +2,44 @@
 % Please edit documentation in R/plot.departement.R
 \name{plot.departement}
 \alias{plot.departement}
-\title{Visualiser la repartition des elus par categorie socio-professionnelle dans un departement}
+\title{Visualiser la répartition des élus par catégorie socio-professionnelle dans un département}
 \usage{
 \method{plot}{departement}(df, ...)
 }
 \arguments{
-\item{df}{Un data frame contenant des informations sur les elus, incluant les colonnes \verb{Code de la catégorie socio-professionnelle},
+\item{df}{Un data frame contenant des informations sur les élus, incluant les colonnes \verb{Code de la catégorie socio-professionnelle},
 \verb{Libellé de la catégorie socio-professionnelle}, \verb{Libellé du département}, et \verb{Code de la commune}.}
 
-\item{...}{Arguments supplementaires, non utilises dans cette methode.}
+\item{...}{Arguments supplémentaires, non utilisés dans cette méthode.}
 }
 \value{
-Un graphique genere avec \code{ggplot2} representant la repartition des elus du departement par categorie socio-professionnelle.
-Il affiche les 10 categories socio-professionnelles les plus representees en fonction du nombre d'elus.
+Un graphique généré avec \code{ggplot2} représentant la répartition des élus du département par catégorie socio-professionnelle.
+Il affiche les 10 catégories socio-professionnelles les plus représentées en fonction du nombre d'élus.
 }
 \description{
-Cette fonction genere un graphique montrant la repartition des elus d'un departement par categorie
-socio-professionnelle. Le graphique est un diagramme a barres, ou l'axe des x represente les codes
-des categories socio-professionnelles et l'axe des y le nombre d'elus dans chaque categorie.
-Elle affiche les 10 categories les plus representees dans le departement.
+Cette fonction génère un graphique montrant la répartition des élus d'un département par catégorie
+socio-professionnelle. Le graphique est un diagramme à barres, où l'axe des x représente les codes
+des catégories socio-professionnelles et l'axe des y le nombre d'élus dans chaque catégorie.
+Elle affiche les 10 catégories les plus représentées dans le département.
 }
 \examples{
 # Exemples d'utilisation
 
 
-# Donnees (departements)
+# Données (départements)
 
 df_Loire_Atlantique <- df_Gers_Loire_Atlantique |>
   filter(`Libellé du département` == "Loire-Atlantique")
 
 df_Gers <- df_Gers_Loire_Atlantique |>
   filter(`Libellé du département` == "Gers")
+
+
+# Data frames appartenant à la classe departement
+
+df_Loire_Atlantique <- structure(df_Loire_Atlantique, class = c("departement", class(df_Loire_Atlantique)))
+
+df_Gers <- structure(df_Gers, class = c("df_Gers", class(df_Gers)))
 
 
 # Utilisation de la fonction

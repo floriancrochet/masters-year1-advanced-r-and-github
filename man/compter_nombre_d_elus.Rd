@@ -2,7 +2,7 @@
 % Please edit documentation in R/compter_nombre_d_elus.R
 \name{compter_nombre_d_elus}
 \alias{compter_nombre_d_elus}
-\title{Compter le nombre d'elus}
+\title{Compter le nombre d'élus}
 \usage{
 compter_nombre_d_elus(df)
 }
@@ -13,14 +13,14 @@ compter_nombre_d_elus(df)
 Un entier représentant le nombre d'élus distincts dans le data frame.
 }
 \description{
-Cette fonction compte le nombre d'elus distincts dans un data frame en se basant
+Cette fonction compte le nombre d'élus distincts dans un data frame en se basant
 sur les colonnes \verb{Nom de l'élu}, \verb{Prénom de l'élu}, et \verb{Date de naissance}.
 }
 \examples{
 # Exemples d'utilisation
 
 
-# Donnees (villes ou departements)
+# Données (villes ou départements)
 
 df_Nantes <- df_Gers_Loire_Atlantique |>
   filter(`Libellé de la commune` == "Nantes")

@@ -1,17 +1,17 @@
-#' Trouver l'elu le plus age
+#' Trouver l'élu le plus âgé
 #'
 #' @description
-#' Cette fonction identifie l'elu le plus age dans un data frame,
-#' en calculant l'age a partir de la date de naissance.
+#' Cette fonction identifie l'élu le plus âgé dans un data frame,
+#' en calculant l'âge à partir de la date de naissance.
 #'
 #' @param df Un data frame contenant une colonne `Date de naissance` au format `"jour/mois/année"`,
 #' ainsi que les colonnes `Nom de l'élu` et `Prénom de l'élu`.
 #'
 #' @return Un data frame avec les colonnes :
-#' - `Nom de l'élu` : Nom de l'elu le plus age.
-#' - `Prénom de l'élu` : Prenom de l'elu le plus age.
-#' - `Date de naissance` : Date de naissance de l'elu le plus age.
-#' - `âge` : Age en annees de l'elu le plus age.
+#' - `Nom de l'élu` : Nom de l'élu le plus âgé.
+#' - `Prénom de l'élu` : Prénom de l'élu le plus âgé.
+#' - `Date de naissance` : Date de naissance de l'élu le plus âgé.
+#' - `âge` : Âge en années de l'élu le plus âgé.
 #'
 #' @importFrom dplyr filter mutate slice select
 #' @importFrom lubridate dmy
@@ -20,7 +20,7 @@
 #' # Exemples d'utilisation
 #'
 #'
-#' # Donnees (villes ou departements)
+#' # Données (villes ou départements)
 #'
 #' df_Nantes <- df_Gers_Loire_Atlantique |>
 #'   filter(`Libellé de la commune` == "Nantes")
@@ -37,13 +37,13 @@
 #'
 #' # Utilisation de la fonction
 #'
-#' trouver_l_elu_le_plus_age(df_Nantes)
+#' trouver_l'élu_le_plus_âgé(df_Nantes)
 #'
-#' trouver_l_elu_le_plus_age(df_Aignan)
+#' trouver_l'élu_le_plus_âgé(df_Aignan)
 #'
-#' trouver_l_elu_le_plus_age(df_Loire_Atlantique)
+#' trouver_l'élu_le_plus_âgé(df_Loire_Atlantique)
 #'
-#' trouver_l_elu_le_plus_age(df_Gers)
+#' trouver_l'élu_le_plus_âgé(df_Gers)
 
 
 trouver_l_elu_le_plus_age <- function(df) {

@@ -2,7 +2,7 @@
 % Please edit documentation in R/trouver_l_elu_le_plus_age.R
 \name{trouver_l_elu_le_plus_age}
 \alias{trouver_l_elu_le_plus_age}
-\title{Trouver l'elu le plus age}
+\title{Trouver l'élu le plus âgé}
 \usage{
 trouver_l_elu_le_plus_age(df)
 }
@@ -13,21 +13,21 @@ ainsi que les colonnes \verb{Nom de l'élu} et \verb{Prénom de l'élu}.}
 \value{
 Un data frame avec les colonnes :
 \itemize{
-\item \verb{Nom de l'élu} : Nom de l'elu le plus age.
-\item \verb{Prénom de l'élu} : Prenom de l'elu le plus age.
-\item \verb{Date de naissance} : Date de naissance de l'elu le plus age.
-\item \code{âge} : Age en annees de l'elu le plus age.
+\item \verb{Nom de l'élu} : Nom de l'élu le plus âgé.
+\item \verb{Prénom de l'élu} : Prénom de l'élu le plus âgé.
+\item \verb{Date de naissance} : Date de naissance de l'élu le plus âgé.
+\item \code{âge} : Âge en années de l'élu le plus âgé.
 }
 }
 \description{
-Cette fonction identifie l'elu le plus age dans un data frame,
-en calculant l'age a partir de la date de naissance.
+Cette fonction identifie l'élu le plus âgé dans un data frame,
+en calculant l'âge à partir de la date de naissance.
 }
 \examples{
 # Exemples d'utilisation
 
 
-# Donnees (villes ou departements)
+# Données (villes ou départements)
 
 df_Nantes <- df_Gers_Loire_Atlantique |>
   filter(`Libellé de la commune` == "Nantes")
@@ -44,11 +44,11 @@ df_Gers <- df_Gers_Loire_Atlantique |>
 
 # Utilisation de la fonction
 
-trouver_l_elu_le_plus_age(df_Nantes)
+trouver_l'élu_le_plus_âgé(df_Nantes)
 
-trouver_l_elu_le_plus_age(df_Aignan)
+trouver_l'élu_le_plus_âgé(df_Aignan)
 
-trouver_l_elu_le_plus_age(df_Loire_Atlantique)
+trouver_l'élu_le_plus_âgé(df_Loire_Atlantique)
 
-trouver_l_elu_le_plus_age(df_Gers)
+trouver_l'élu_le_plus_âgé(df_Gers)
 }

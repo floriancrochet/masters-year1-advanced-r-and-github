@@ -2,7 +2,7 @@
 % Please edit documentation in R/calcul_distribution_age.R
 \name{calcul_distribution_age}
 \alias{calcul_distribution_age}
-\title{Calculer la distribution des ages}
+\title{Calculer la distribution des âges}
 \usage{
 calcul_distribution_age(df, ...)
 }
@@ -10,22 +10,22 @@ calcul_distribution_age(df, ...)
 \item{df}{Un data frame contenant une colonne \verb{Date de naissance} et
 une colonne \verb{Libellé de la commune} ou \verb{Libellé du département}.}
 
-\item{...}{Parametres supplementaires (non utilises directement dans cette fonction).}
+\item{...}{Paramètres supplémentaires (non utilisés directement dans cette fonction).}
 }
 \value{
-Un tibble contenant le nom de la commune ou du departement, ainsi que
-les statistiques d'age : minimum, premier quartile (Q1), mediane, moyenne,
+Un tibble contenant le nom de la commune ou du département, ainsi que
+les statistiques d'âge : minimum, premier quartile (Q1), médiane, moyenne,
 troisième quartile (Q3) et maximum.
 }
 \description{
-Cette fonction calcule la distribution des ages des individus d'un data frame
-en renvoyant des statistiques descriptives : minimum, quartiles, mediane, moyenne et maximum.
+Cette fonction calcule la distribution des âges des individus d'un data frame
+en renvoyant des statistiques descriptives : minimum, quartiles, médiane, moyenne et maximum.
 }
 \examples{
 # Exemples d'utilisation
 
 
-# Donnees (villes ou departements)
+# Données (villes ou départements)
 
 df_Nantes <- df_Gers_Loire_Atlantique |>
   filter(`Libellé de la commune` == "Nantes")
