@@ -36,10 +36,10 @@ Ce rapport propose une exploration statistique et graphique des données concern
 
 ```{r}
 # Installation depuis GitHub
-# remotes::install_github("floriancrochet/firstlibFlorian", quiet = TRUE)
+# remotes::install_github("floriancrochet/firstlibflorian", quiet = TRUE)
 
 # Chargement
-library(firstlibFlorian)
+library(firstlibflorian)
 ```
 
 

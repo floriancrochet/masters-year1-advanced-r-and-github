@@ -7,7 +7,7 @@
 
 # === Fichiers du projet RStudio ===
 *.Rproj
-!firstlibFlorian.Rproj
+!firstlibflorian.Rproj
 
 # === Données temporaires ===
 *.csv

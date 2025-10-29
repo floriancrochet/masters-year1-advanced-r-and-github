@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 ### Chargement de la librairie
 
 ```{r setup}
-library(firstlibFlorian)
+library(firstlibflorian)
 ```
 
 

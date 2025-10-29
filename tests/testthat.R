@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/articles/special-files.html
 
 library(testthat)
-library(firstlibFlorian)
+library(firstlibflorian)
 
-test_check("firstlibFlorian")
+test_check("firstlibflorian")

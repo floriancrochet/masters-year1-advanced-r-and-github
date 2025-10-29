@@ -1,7 +1,7 @@
 ---
-title: "Bienvenue dans la documentation de firstlibFlorian"
+title: "Bienvenue dans la documentation de firstlibflorian"
 vignette: >
-  %\VignetteIndexEntry{Bienvenue dans la documentation de firstlibFlorian}
+  %\VignetteIndexEntry{Bienvenue dans la documentation de firstlibflorian}
   %\VignetteEngine{quarto::html}
   %\VignetteEncoding{UTF-8}
 ---
@@ -10,12 +10,12 @@ vignette: >
 
 ## Informations générales
 
-- **Nom du package** : `firstlibFlorian`  
+- **Nom du package** : `firstlibflorian`  
 - **Titre** : Analyse et visualisation des données géographiques et démographiques des communes et départements  
 - **Version** : 0.0.0.9000  
 - **Auteur** : Florian Crochet  
 - **Licence** : GPL-3  
-- **URL** : [https://floriancrochet.github.io/firstlibFlorian/](https://floriancrochet.github.io/firstlibFlorian/)  
+- **URL** : [https://floriancrochet.github.io/firstlibflorian/](https://floriancrochet.github.io/firstlibflorian/)  
 
 ## Fonctionnalités
 
@@ -62,4 +62,4 @@ Pour installer le package depuis GitHub :
 
 ```{r}
 # install.packages("devtools")
-devtools::install_github("floriancrochet/firstlibFlorian")
+devtools::install_github("floriancrochet/firstlibflorian")

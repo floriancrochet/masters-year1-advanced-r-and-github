@@ -1,4 +1,4 @@
-Package: firstlibFlorian
+Package: firstlibflorian
 Title: "Analyse et visualisation des données géographiques et démographiques des communes et départements"
 Version: 0.1.0
 Authors@R: 
@@ -29,4 +29,4 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 VignetteBuilder: quarto
-URL: https://floriancrochet.github.io/firstlibFlorian/
+URL: https://floriancrochet.github.io/firstlibflorian/
