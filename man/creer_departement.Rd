@@ -2,21 +2,21 @@
 % Please edit documentation in R/creer_departement.R
 \name{creer_departement}
 \alias{creer_departement}
-\title{Créer un objet de classe 'departement' à partir d'un data frame}
+\title{Créer un objet de classe 'departement' à partir d'un DataFrame}
 \usage{
 creer_departement(df)
 }
 \arguments{
-\item{df}{Un data frame contenant des informations sur les élus d'un département. Le data frame doit inclure la colonne
+\item{df}{Un DataFrame contenant des informations sur les élus d'un département. Le DataFrame doit inclure la colonne
 \verb{Code du département}.}
 }
 \value{
-Un objet de classe \code{departement} contenant les mêmes informations que le data frame d'entrée, mais avec une nouvelle
+Un objet de classe \code{departement} contenant les mêmes informations que le DataFrame d'entrée, mais avec une nouvelle
 classe attribuée.
 }
 \description{
-Cette fonction prend un data frame contenant des informations sur un département et valide que toutes les lignes correspondent
-à un seul département (en vérifiant que le \verb{Code du département} est unique). Elle transforme ensuite ce data frame en un objet de
+Cette fonction prend un DataFrame contenant des informations sur un département et valide que toutes les lignes correspondent
+à un seul département (en vérifiant que le \verb{Code du département} est unique). Elle transforme ensuite ce DataFrame en un objet de
 classe \code{departement} pour lui attribuer un comportement spécifique lors de son utilisation.
 }
 \examples{
@@ -25,10 +25,10 @@ classe \code{departement} pour lui attribuer un comportement spécifique lors de
 
 # Données (départements)
 
-df_Loire_Atlantique <- df_Gers_Loire_Atlantique |>
+df_Loire_Atlantique <- df_gers_loire_atlantique |>
   filter(`Libellé du département` == "Loire-Atlantique")
 
-df_Gers <- df_Gers_Loire_Atlantique |>
+df_Gers <- df_gers_loire_atlantique |>
   filter(`Libellé du département` == "Gers")
 
 

@@ -1,5 +1,5 @@
 test_that("trouver_moyenne_age_faible_elevee renvoie une erreur pour un schéma incorrect", {
-  df_Nantes_invalide <- df_Gers_Loire_Atlantique |>
+  df_Nantes_invalide <- df_gers_loire_atlantique |>
     dplyr::filter(`Libellé de la commune` == "Nantes") |>
     dplyr::select(-`Date de naissance`)
 
@@ -7,7 +7,7 @@ test_that("trouver_moyenne_age_faible_elevee renvoie une erreur pour un schéma 
 })
 
 test_that("trouver_moyenne_age_faible_elevee fonctionne avec un schéma valide", {
-  df_Nantes_valide <- df_Gers_Loire_Atlantique |>
+  df_Nantes_valide <- df_gers_loire_atlantique |>
     dplyr::filter(`Libellé de la commune` == "Nantes")
 
   expect_silent(trouver_moyenne_age_faible_elevee(df_Nantes_valide))
@@ -17,7 +17,7 @@ test_that("trouver_moyenne_age_faible_elevee fonctionne avec un schéma valide",
 
 test_that("trouver_moyenne_age_faible_elevee renvoie les bonnes statistiques de la moyenne d'âge", {
   # Utilisation du jeu de données df_Nantes_identique
-  df_Nantes_identique <- df_Gers_Loire_Atlantique |>
+  df_Nantes_identique <- df_gers_loire_atlantique |>
     dplyr::filter(`Libellé de la commune` == "Nantes")
 
   # Résultat attendu : une tibble avec les statistiques calculées sur l'âge

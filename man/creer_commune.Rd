@@ -2,21 +2,21 @@
 % Please edit documentation in R/creer_commune.R
 \name{creer_commune}
 \alias{creer_commune}
-\title{Créer un objet de classe 'commune' à partir d'un data frame}
+\title{Créer un objet de classe 'commune' à partir d'un DataFrame}
 \usage{
 creer_commune(df)
 }
 \arguments{
-\item{df}{Un data frame contenant des informations sur les élus d'une commune. Le data frame doit inclure la colonne
+\item{df}{Un DataFrame contenant des informations sur les élus d'une commune. Le DataFrame doit inclure la colonne
 \verb{Code de la commune}.}
 }
 \value{
-Un objet de classe \code{commune} contenant les mêmes informations que le data frame d'entrée, mais avec une nouvelle
+Un objet de classe \code{commune} contenant les mêmes informations que le DataFrame d'entrée, mais avec une nouvelle
 classe attribuée.
 }
 \description{
-Cette fonction prend un data frame contenant des informations sur une commune et valide que toutes les lignes correspondent
-à une seule commune (en vérifiant que le \verb{Code de la commune} est unique). Elle transforme ensuite ce data frame en un objet de
+Cette fonction prend un DataFrame contenant des informations sur une commune et valide que toutes les lignes correspondent
+à une seule commune (en vérifiant que le \verb{Code de la commune} est unique). Elle transforme ensuite ce DataFrame en un objet de
 classe \code{commune} pour lui attribuer un comportement spécifique lors de son utilisation.
 }
 \examples{
@@ -25,10 +25,10 @@ classe \code{commune} pour lui attribuer un comportement spécifique lors de son
 
 # Données (villes)
 
-df_Nantes <- df_Gers_Loire_Atlantique |>
+df_Nantes <- df_gers_loire_atlantique |>
   filter(`Libellé de la commune` == "Nantes")
 
-df_Aignan <- df_Gers_Loire_Atlantique |>
+df_Aignan <- df_gers_loire_atlantique |>
   filter(`Libellé de la commune` == "Aignan")
 
 

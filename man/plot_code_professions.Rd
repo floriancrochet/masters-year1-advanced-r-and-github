@@ -7,7 +7,7 @@
 plot_code_professions(df)
 }
 \arguments{
-\item{df}{Un data frame contenant une colonne \verb{Code de la catégorie socio-professionnelle}.}
+\item{df}{Un DataFrame contenant une colonne \verb{Code de la catégorie socio-professionnelle}.}
 }
 \value{
 Un objet ggplot affichant un diagramme en barres de la distribution des élus
@@ -23,16 +23,16 @@ des élus selon leur catégorie socio-professionnelle.
 
 # Données (villes ou départements)
 
-df_Nantes <- df_Gers_Loire_Atlantique |>
+df_Nantes <- df_gers_loire_atlantique |>
   filter(`Libellé de la commune` == "Nantes")
 
-df_Aignan <- df_Gers_Loire_Atlantique |>
+df_Aignan <- df_gers_loire_atlantique |>
   filter(`Libellé de la commune` == "Aignan")
 
-df_Loire_Atlantique <- df_Gers_Loire_Atlantique |>
+df_Loire_Atlantique <- df_gers_loire_atlantique |>
   filter(`Libellé du département` == "Loire-Atlantique")
 
-df_Gers <- df_Gers_Loire_Atlantique |>
+df_Gers <- df_gers_loire_atlantique |>
   filter(`Libellé du département` == "Gers")
 
 

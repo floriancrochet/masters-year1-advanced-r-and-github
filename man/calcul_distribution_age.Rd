@@ -7,7 +7,7 @@
 calcul_distribution_age(df, ...)
 }
 \arguments{
-\item{df}{Un data frame contenant une colonne \verb{Date de naissance} et
+\item{df}{Un DataFrame contenant une colonne \verb{Date de naissance} et
 une colonne \verb{Libellé de la commune} ou \verb{Libellé du département}.}
 
 \item{...}{Paramètres supplémentaires (non utilisés directement dans cette fonction).}
@@ -18,7 +18,7 @@ les statistiques d'âge : minimum, premier quartile (Q1), médiane, moyenne,
 troisième quartile (Q3) et maximum.
 }
 \description{
-Cette fonction calcule la distribution des âges des individus d'un data frame
+Cette fonction calcule la distribution des âges des individus d'un DataFrame
 en renvoyant des statistiques descriptives : minimum, quartiles, médiane, moyenne et maximum.
 }
 \examples{
@@ -27,16 +27,16 @@ en renvoyant des statistiques descriptives : minimum, quartiles, médiane, moyen
 
 # Données (villes ou départements)
 
-df_Nantes <- df_Gers_Loire_Atlantique |>
+df_Nantes <- df_gers_loire_atlantique |>
   filter(`Libellé de la commune` == "Nantes")
 
-df_Aignan <- df_Gers_Loire_Atlantique |>
+df_Aignan <- df_gers_loire_atlantique |>
   filter(`Libellé de la commune` == "Aignan")
 
-df_Loire_Atlantique <- df_Gers_Loire_Atlantique |>
+df_Loire_Atlantique <- df_gers_loire_atlantique |>
   filter(`Libellé du département` == "Loire-Atlantique")
 
-df_Gers <- df_Gers_Loire_Atlantique |>
+df_Gers <- df_gers_loire_atlantique |>
   filter(`Libellé du département` == "Gers")
 
 

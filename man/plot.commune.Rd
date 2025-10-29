@@ -7,7 +7,7 @@
 \method{plot}{commune}(df, ...)
 }
 \arguments{
-\item{df}{Un data frame contenant des informations sur les élus, incluant les colonnes \verb{Code de la catégorie socio-professionnelle},
+\item{df}{Un DataFrame contenant des informations sur les élus, incluant les colonnes \verb{Code de la catégorie socio-professionnelle},
 \verb{Libellé de la catégorie socio-professionnelle}, \verb{Libellé de la commune} et \verb{Libellé du département}.}
 
 \item{...}{Arguments supplémentaires, non utilisés dans cette méthode.}
@@ -28,14 +28,14 @@ La fonction utilise \code{ggplot2} pour afficher les résultats.
 
 # Données (villes)
 
-df_Nantes <- df_Gers_Loire_Atlantique |>
+df_Nantes <- df_gers_loire_atlantique |>
   filter(`Libellé de la commune` == "Nantes")
 
-df_Aignan <- df_Gers_Loire_Atlantique |>
+df_Aignan <- df_gers_loire_atlantique |>
   filter(`Libellé de la commune` == "Aignan")
 
 
-# Data frames appartenant à la classe commune
+# DataFrames appartenant à la classe commune
 
 df_Nantes <- structure(df_Nantes, class = c("commune", class(df_Nantes)))
 

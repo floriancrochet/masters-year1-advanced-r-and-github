@@ -1,6 +1,48 @@
+# === R & RStudio ===
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
-/doc/
+.Rapp.history
+
+# === Fichiers du projet RStudio ===
+*.Rproj
+!firstlibFlorian.Rproj
+
+# === Données temporaires ===
+*.csv
+*.xlsx
+*.xls
+*.sav
+*.json
+*.parquet
+*.zip
+
+# === Rapports ou sorties temporaires ===
+*.html
+*.pdf
+*.docx
+*_files/
+rapport_files/
+vignettes/*_files/
+vignettes/*.html
+
+# === Dossiers générés automatiquement ===
+/.Rcheck/
 /Meta/
+/doc/
+/docs/  # site pkgdown (sera reconstruit)
+/pkgdown/
+/renv/
+/renv.lock
+.Renviron
+
+# === Cache et build ===
+__pycache__/
+*.log
+*.tmp
+*.bak
+
+# === Systèmes externes ===
+.DS_Store
+Thumbs.db

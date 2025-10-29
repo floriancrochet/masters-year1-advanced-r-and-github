@@ -7,14 +7,14 @@
 compter_nombre_d_adjoints(df)
 }
 \arguments{
-\item{df}{Un data frame contenant une colonne \verb{Libellé de la fonction} (type \code{character}).}
+\item{df}{Un DataFrame contenant une colonne \verb{Libellé de la fonction} (type \code{character}).}
 }
 \value{
 Un entier représentant le nombre d'occurrences du mot "adjoint".
 }
 \description{
 Cette fonction compte le nombre d'occurrences du mot "adjoint"
-dans la colonne \verb{Libellé de la fonction} d'un data frame.
+dans la colonne \verb{Libellé de la fonction} d'un DataFrame.
 }
 \examples{
 # Exemples d'utilisation
@@ -22,16 +22,16 @@ dans la colonne \verb{Libellé de la fonction} d'un data frame.
 
 # Données (villes ou départements)
 
-df_Nantes <- df_Gers_Loire_Atlantique |>
+df_Nantes <- df_gers_loire_atlantique |>
   filter(`Libellé de la commune` == "Nantes")
 
-df_Aignan <- df_Gers_Loire_Atlantique |>
+df_Aignan <- df_gers_loire_atlantique |>
   filter(`Libellé de la commune` == "Aignan")
 
-df_Loire_Atlantique <- df_Gers_Loire_Atlantique |>
+df_Loire_Atlantique <- df_gers_loire_atlantique |>
   filter(`Libellé du département` == "Loire-Atlantique")
 
-df_Gers <- df_Gers_Loire_Atlantique |>
+df_Gers <- df_gers_loire_atlantique |>
   filter(`Libellé du département` == "Gers")
 
 

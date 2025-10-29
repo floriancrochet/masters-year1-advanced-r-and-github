@@ -6,15 +6,16 @@
 #' des catégories socio-professionnelles et l'axe des y le nombre d'élus dans chaque catégorie.
 #' Elle affiche les 10 catégories les plus représentées dans le département.
 #'
-#' @param df Un data frame contenant des informations sur les élus, incluant les colonnes `Code de la catégorie socio-professionnelle`,
+#' @param df Un DataFrame contenant des informations sur les élus, incluant les colonnes `Code de la catégorie socio-professionnelle`,
 #' `Libellé de la catégorie socio-professionnelle`, `Libellé du département`, et `Code de la commune`.
 #' @param ... Arguments supplémentaires, non utilisés dans cette méthode.
 #'
 #' @return Un graphique généré avec `ggplot2` représentant la répartition des élus du département par catégorie socio-professionnelle.
 #' Il affiche les 10 catégories socio-professionnelles les plus représentées en fonction du nombre d'élus.
 #'
-#' @importFrom dplyr filter count arrange
-#' @importFrom ggplot2 ggplot aes geom_bar labs theme_bw guides guide_legend
+#' @importFrom dplyr filter count
+#' @importFrom ggplot2 ggplot aes geom_bar labs theme_bw element_text guides guide_legend theme
+#' @importFrom cowplot get_plot_component ggdraw
 #'
 #' @examples
 #' # Exemples d'utilisation
@@ -22,14 +23,14 @@
 #'
 #' # Données (départements)
 #'
-#' df_Loire_Atlantique <- df_Gers_Loire_Atlantique |>
+#' df_Loire_Atlantique <- df_gers_loire_atlantique |>
 #'   filter(`Libellé du département` == "Loire-Atlantique")
 #'
-#' df_Gers <- df_Gers_Loire_Atlantique |>
+#' df_Gers <- df_gers_loire_atlantique |>
 #'   filter(`Libellé du département` == "Gers")
 #'
 #'
-#' # Data frames appartenant à la classe departement
+#' # DataFrames appartenant à la classe departement
 #'
 #' df_Loire_Atlantique <- structure(df_Loire_Atlantique, class = c("departement", class(df_Loire_Atlantique)))
 #'
@@ -53,7 +54,7 @@ plot.departement <- function(df, ...) {
   departement <- df$`Libellé du département`
   nombre_communes <- length(unique(df$`Code de la commune`))
 
-  df |>
+  p <- df |>
     count(
       `Code de la catégorie socio-professionnelle`,
       `Libellé de la catégorie socio-professionnelle`
@@ -78,7 +79,31 @@ plot.departement <- function(df, ...) {
       )
     ) +
     theme_bw() +
+    theme(
+      plot.title = element_text(size = 20.3, face = "bold"), # Titre principal
+      axis.title.x = element_text(size = 18, face = "bold"), # Titre axe X
+      axis.title.y = element_text(size = 18, face = "bold"), # Titre axe Y
+      axis.text = element_text(size = 16),                   # Texte des axes
+      legend.title = element_text(size = 20, face = "bold"), # Titre de la légende
+      legend.text = element_text(size = 18)                  # Texte de la légende
+    ) +
     guides(
       fill = guide_legend(ncol = 1)
-    )  # Force la légende à une seule colonne
+    )
+  
+  # Extraction de la légende
+  leg_list <- get_plot_component(p, "guide-box", return_all = TRUE)
+  leg <- leg_list[[1]]
+  
+  # Graphique sans légende
+  p_no_legend <- p + theme(legend.position = "none")
+  
+  # Retourne une liste complète
+  res <- list(
+    graphique = p, # Graphique complet
+    graphique_sans_legende = p_no_legend, # Graphique sans légende
+    legende = ggdraw(leg) # Légende seule
+  )
+  
+  res
 }

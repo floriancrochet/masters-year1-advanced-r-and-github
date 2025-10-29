@@ -7,7 +7,7 @@
 \method{plot}{departement}(df, ...)
 }
 \arguments{
-\item{df}{Un data frame contenant des informations sur les élus, incluant les colonnes \verb{Code de la catégorie socio-professionnelle},
+\item{df}{Un DataFrame contenant des informations sur les élus, incluant les colonnes \verb{Code de la catégorie socio-professionnelle},
 \verb{Libellé de la catégorie socio-professionnelle}, \verb{Libellé du département}, et \verb{Code de la commune}.}
 
 \item{...}{Arguments supplémentaires, non utilisés dans cette méthode.}
@@ -28,14 +28,14 @@ Elle affiche les 10 catégories les plus représentées dans le département.
 
 # Données (départements)
 
-df_Loire_Atlantique <- df_Gers_Loire_Atlantique |>
+df_Loire_Atlantique <- df_gers_loire_atlantique |>
   filter(`Libellé du département` == "Loire-Atlantique")
 
-df_Gers <- df_Gers_Loire_Atlantique |>
+df_Gers <- df_gers_loire_atlantique |>
   filter(`Libellé du département` == "Gers")
 
 
-# Data frames appartenant à la classe departement
+# DataFrames appartenant à la classe departement
 
 df_Loire_Atlantique <- structure(df_Loire_Atlantique, class = c("departement", class(df_Loire_Atlantique)))
 

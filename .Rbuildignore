@@ -1,4 +1,39 @@
+# === Fichiers de projet et IDE ===
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^doc$
+
+# === Fichiers temporaires ===
+^\.Rhistory$
+^\.RData$
+^\.Ruserdata$
+^\.Rapp\.history$
+^\.Renviron$
+
+# === Dossiers temporaires ===
 ^Meta$
+^\.git$
+^\.github$
+^\.gitignore$
+^\.Rbuildignore$
+^\.vscode$
+^__pycache__$
+^renv$
+^renv\.lock$
+
+# === Rapports et rendus Quarto ===
+^rapport_files$
+^rapport\.html$
+^vignettes/.*_files$
+^vignettes/.*\.html$
+
+# === Sites et documentation ===
+^docs$
+^doc$
+^pkgdown$
+^_pkgdown\.yml$
+^README\.Rmd$
+
+# === Environnements et caches ===
+^\.Rcheck$
+^\.DS_Store$
+^Thumbs\.db$

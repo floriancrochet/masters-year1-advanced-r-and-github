@@ -7,7 +7,7 @@
 \method{summary}{commune}(df, ...)
 }
 \arguments{
-\item{df}{Un data frame contenant des informations sur les élus d'une commune,
+\item{df}{Un DataFrame contenant des informations sur les élus d'une commune,
 incluant les colonnes \verb{Libellé de la commune} et \verb{Date de naissance}.}
 
 \item{...}{Arguments supplémentaires, non utilisés dans cette méthode.}
@@ -32,14 +32,14 @@ des élus, ainsi que le nom et l'âge de l'élu(e) le/la plus âgé(e).
 
 # Données (villes)
 
-df_Nantes <- df_Gers_Loire_Atlantique |>
+df_Nantes <- df_gers_loire_atlantique |>
   filter(`Libellé de la commune` == "Nantes")
 
-df_Aignan <- df_Gers_Loire_Atlantique |>
+df_Aignan <- df_gers_loire_atlantique |>
   filter(`Libellé de la commune` == "Aignan")
 
 
-# Data frames appartenant à la classe commune
+# DataFrames appartenant à la classe commune
 
 df_Nantes <- structure(df_Nantes, class = c("commune", class(df_Nantes)))
 

@@ -1,13 +1,13 @@
 #' Trouver l'élu le plus âgé
 #'
 #' @description
-#' Cette fonction identifie l'élu le plus âgé dans un data frame,
+#' Cette fonction identifie l'élu le plus âgé dans un DataFrame,
 #' en calculant l'âge à partir de la date de naissance.
 #'
-#' @param df Un data frame contenant une colonne `Date de naissance` au format `"jour/mois/année"`,
+#' @param df Un DataFrame contenant une colonne `Date de naissance` au format `"jour/mois/année"`,
 #' ainsi que les colonnes `Nom de l'élu` et `Prénom de l'élu`.
 #'
-#' @return Un data frame avec les colonnes :
+#' @return Un DataFrame avec les colonnes :
 #' - `Nom de l'élu` : Nom de l'élu le plus âgé.
 #' - `Prénom de l'élu` : Prénom de l'élu le plus âgé.
 #' - `Date de naissance` : Date de naissance de l'élu le plus âgé.
@@ -24,16 +24,16 @@
 #'
 #' # Données (villes ou départements)
 #'
-#' df_Nantes <- df_Gers_Loire_Atlantique |>
+#' df_Nantes <- df_gers_loire_atlantique |>
 #'   filter(`Libellé de la commune` == "Nantes")
 #'
-#' df_Aignan <- df_Gers_Loire_Atlantique |>
+#' df_Aignan <- df_gers_loire_atlantique |>
 #'   filter(`Libellé de la commune` == "Aignan")
 #'
-#' df_Loire_Atlantique <- df_Gers_Loire_Atlantique |>
+#' df_Loire_Atlantique <- df_gers_loire_atlantique |>
 #'   filter(`Libellé du département` == "Loire-Atlantique")
 #'
-#' df_Gers <- df_Gers_Loire_Atlantique |>
+#' df_Gers <- df_gers_loire_atlantique |>
 #'   filter(`Libellé du département` == "Gers")
 #'
 #'

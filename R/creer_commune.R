@@ -1,14 +1,14 @@
-#' Créer un objet de classe 'commune' à partir d'un data frame
+#' Créer un objet de classe 'commune' à partir d'un DataFrame
 #'
 #' @description
-#' Cette fonction prend un data frame contenant des informations sur une commune et valide que toutes les lignes correspondent
-#' à une seule commune (en vérifiant que le `Code de la commune` est unique). Elle transforme ensuite ce data frame en un objet de
+#' Cette fonction prend un DataFrame contenant des informations sur une commune et valide que toutes les lignes correspondent
+#' à une seule commune (en vérifiant que le `Code de la commune` est unique). Elle transforme ensuite ce DataFrame en un objet de
 #' classe `commune` pour lui attribuer un comportement spécifique lors de son utilisation.
 #'
-#' @param df Un data frame contenant des informations sur les élus d'une commune. Le data frame doit inclure la colonne
+#' @param df Un DataFrame contenant des informations sur les élus d'une commune. Le DataFrame doit inclure la colonne
 #' `Code de la commune`.
 #'
-#' @return Un objet de classe `commune` contenant les mêmes informations que le data frame d'entrée, mais avec une nouvelle
+#' @return Un objet de classe `commune` contenant les mêmes informations que le DataFrame d'entrée, mais avec une nouvelle
 #' classe attribuée.
 #'
 #' @importFrom dplyr filter
@@ -19,10 +19,10 @@
 #'
 #' # Données (villes)
 #'
-#' df_Nantes <- df_Gers_Loire_Atlantique |>
+#' df_Nantes <- df_gers_loire_atlantique |>
 #'   filter(`Libellé de la commune` == "Nantes")
 #'
-#' df_Aignan <- df_Gers_Loire_Atlantique |>
+#' df_Aignan <- df_gers_loire_atlantique |>
 #'   filter(`Libellé de la commune` == "Aignan")
 #'
 #'

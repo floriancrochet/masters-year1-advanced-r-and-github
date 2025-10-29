@@ -1,18 +1,15 @@
-#' Valider le schéma des données d'un data frame
+#' Valider le schéma des données d'un DataFrame
 #'
 #' @description
-#' Cette fonction vérifie que les colonnes du data frame sont conformes à un schéma prédéfini. Le schéma attendu inclut des colonnes spécifiques
-#' liées aux informations sur les élus, telles que le code et le libellé du département, le code sexe, les dates de naissance, et d'autres informations
-#' sur les élus et leurs fonctions.
+#' Cette fonction vérifie que les colonnes du DataFrame sont conformes à un schéma prédéfini. Le schéma attendu inclut des colonnes spécifiques
+#' liées aux informations sur les élus.
 #'
-#' @param df Un data frame contenant des informations sur les élus, qui doit avoir les colonnes suivantes :
-#' `Code du département`, `Libellé du département`, `Code de la collectivité à statut particulier`,
-#' `Libellé de la collectivité à statut particulier`, `Code de la commune`, `Libellé de la commune`,
-#' `Nom de l'élu`, `Prénom de l'élu`, `Code sexe`, `Date de naissance`, `Code de la catégorie socio-professionnelle`,
-#' `Libellé de la catégorie socio-professionnelle`, `Date de début du mandat`, `Libellé de la fonction`,
-#' `Date de début de la fonction`, et `Code nationalité`.
-#'
-#' @return Aucun retour explicite. Si les colonnes du data frame ne correspondent pas au schéma, une erreur sera levée.
+#' @param df Un DataFrame, contenant des informations sur les élus, qui doit avoir au minimum les colonnes suivantes :
+#' `Code du département`, `Libellé du département`, `Code de la commune`, `Libellé de la commune`,
+#' `Nom de l'élu`, `Prénom de l'élu`, `Date de naissance`, `Code de la catégorie socio-professionnelle`,
+#' `Libellé de la fonction`.
+#' 
+#' @return Aucun retour explicite. Un message ou un avertissement est affiché si le schéma n’est pas respecté.
 #'
 #' @importFrom dplyr filter
 #'
@@ -24,16 +21,16 @@
 #'
 #' # Données (villes ou départements)
 #'
-#' df_Nantes <- df_Gers_Loire_Atlantique |>
+#' df_Nantes <- df_gers_loire_atlantique |>
 #'   filter(`Libellé de la commune` == "Nantes")
 #'
-#' df_Aignan <- df_Gers_Loire_Atlantique |>
+#' df_Aignan <- df_gers_loire_atlantique |>
 #'   filter(`Libellé de la commune` == "Aignan")
 #'
-#' df_Loire_Atlantique <- df_Gers_Loire_Atlantique |>
+#' df_Loire_Atlantique <- df_gers_loire_atlantique |>
 #'   filter(`Libellé du département` == "Loire-Atlantique")
 #'
-#' df_Gers <- df_Gers_Loire_Atlantique |>
+#' df_Gers <- df_gers_loire_atlantique |>
 #'   filter(`Libellé du département` == "Gers")
 #'
 #'
@@ -47,28 +44,51 @@
 #'
 #' valider_schema(df_Gers)
 #'
-#' valider_schema(df_Gers_Loire_Atlantique)
+#' valider_schema(df_gers_loire_atlantique)
 
 
 valider_schema <- function(df) {
+  # Vérifier si l'objet est bien un data.frame
+  if (!is.data.frame(df)) {
+    stop("L'objet fourni n'est pas un data.frame.")
+  }
+  
+  # Schéma minimal requis
   schema <- c(
     "Code du département",
     "Libellé du département",
-    "Code de la collectivité à statut particulier",
-    "Libellé de la collectivité à statut particulier",
     "Code de la commune",
     "Libellé de la commune",
     "Nom de l'élu",
     "Prénom de l'élu",
-    "Code sexe",
     "Date de naissance",
     "Code de la catégorie socio-professionnelle",
-    "Libellé de la catégorie socio-professionnelle",
-    "Date de début du mandat",
-    "Libellé de la fonction",
-    "Date de début de la fonction",
-    "Code nationalité"
+    "Libellé de la fonction"
   )
-
-  stopifnot(identical(colnames(df), schema))
+  
+  # Colonnes manquantes
+  missing_cols <- setdiff(schema, colnames(df))
+  
+  # Colonnes supplémentaires
+  extra_cols <- setdiff(colnames(df), schema)
+  
+  if (length(missing_cols) > 0) {
+    warning(
+      paste0(
+        "Colonnes manquantes : ", paste(missing_cols, collapse = ", "), "\n",
+        "Cela peut entraîner des erreurs dans certaines fonctions du package."
+      )
+    )
+  }
+  
+  # if (length(extra_cols) > 0) {
+  #   message(
+  #     paste0(
+  #       "Colonnes supplémentaires détectées : ", paste(extra_cols, collapse = ", "), "\n",
+  #       "Elles seront ignorées par les fonctions qui utilisent le schéma standard."
+  #     )
+  #   )
+  # }
+  
+  invisible(df)
 }

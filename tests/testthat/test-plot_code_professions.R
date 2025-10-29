@@ -1,5 +1,5 @@
 test_that("plot_code_professions renvoie une erreur pour un schéma incorrect", {
-  df_Nantes_invalide <- df_Gers_Loire_Atlantique |>
+  df_Nantes_invalide <- df_gers_loire_atlantique |>
     dplyr::filter(`Libellé de la commune` == "Nantes") |>
     dplyr::select(-`Code de la catégorie socio-professionnelle`)
 
@@ -7,7 +7,7 @@ test_that("plot_code_professions renvoie une erreur pour un schéma incorrect", 
 })
 
 test_that("plot_code_professions fonctionne avec un schéma valide", {
-  df_Nantes_valide <- df_Gers_Loire_Atlantique |>
+  df_Nantes_valide <- df_gers_loire_atlantique |>
     dplyr::filter(`Libellé de la commune` == "Nantes")
 
   expect_silent(plot_code_professions(df_Nantes_valide))
@@ -16,7 +16,7 @@ test_that("plot_code_professions fonctionne avec un schéma valide", {
 
 
 test_that("plot_code_professions fonctionne sans erreur et génère un graphique ggplot", {
-  df_Nantes <- df_Gers_Loire_Atlantique |>
+  df_Nantes <- df_gers_loire_atlantique |>
     dplyr::filter(`Libellé de la commune` == "Nantes")  # Sélection d'une seule commune
 
   # Vérifier qu'il n'y a pas d'erreurs, d'avertissements ou de messages pendant l'exécution de la fonction

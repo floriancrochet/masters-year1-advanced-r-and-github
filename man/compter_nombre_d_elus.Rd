@@ -7,13 +7,13 @@
 compter_nombre_d_elus(df)
 }
 \arguments{
-\item{df}{Un data frame contenant les colonnes \verb{Nom de l'élu}, \verb{Prénom de l'élu}, et \verb{Date de naissance} (type \code{character} pour les deux premières et \code{Date} pour la dernière).}
+\item{df}{Un DataFrame contenant les colonnes \verb{Nom de l'élu}, \verb{Prénom de l'élu}, et \verb{Date de naissance} (type \code{character} pour les deux premières et \code{Date} pour la dernière).}
 }
 \value{
-Un entier représentant le nombre d'élus distincts dans le data frame.
+Un entier représentant le nombre d'élus distincts dans le DataFrame.
 }
 \description{
-Cette fonction compte le nombre d'élus distincts dans un data frame en se basant
+Cette fonction compte le nombre d'élus distincts dans un DataFrame en se basant
 sur les colonnes \verb{Nom de l'élu}, \verb{Prénom de l'élu}, et \verb{Date de naissance}.
 }
 \examples{
@@ -22,16 +22,16 @@ sur les colonnes \verb{Nom de l'élu}, \verb{Prénom de l'élu}, et \verb{Date d
 
 # Données (villes ou départements)
 
-df_Nantes <- df_Gers_Loire_Atlantique |>
+df_Nantes <- df_gers_loire_atlantique |>
   filter(`Libellé de la commune` == "Nantes")
 
-df_Aignan <- df_Gers_Loire_Atlantique |>
+df_Aignan <- df_gers_loire_atlantique |>
   filter(`Libellé de la commune` == "Aignan")
 
-df_Loire_Atlantique <- df_Gers_Loire_Atlantique |>
+df_Loire_Atlantique <- df_gers_loire_atlantique |>
   filter(`Libellé du département` == "Loire-Atlantique")
 
-df_Gers <- df_Gers_Loire_Atlantique |>
+df_Gers <- df_gers_loire_atlantique |>
   filter(`Libellé du département` == "Gers")
 
 

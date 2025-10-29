@@ -1,5 +1,5 @@
 test_that("trouver_l_elu_le_plus_age renvoie une erreur pour un schéma incorrect", {
-  df_Nantes_invalide <- df_Gers_Loire_Atlantique |>
+  df_Nantes_invalide <- df_gers_loire_atlantique |>
     dplyr::filter(`Libellé de la commune` == "Nantes") |>
     dplyr::select(-`Date de naissance`)  # Retrait de la colonne utilisée par la fonction
 
@@ -7,7 +7,7 @@ test_that("trouver_l_elu_le_plus_age renvoie une erreur pour un schéma incorrec
 })
 
 test_that("trouver_l_elu_le_plus_age fonctionne avec un schéma valide", {
-  df_Nantes_valide <- df_Gers_Loire_Atlantique |>
+  df_Nantes_valide <- df_gers_loire_atlantique |>
     dplyr::filter(`Libellé de la commune` == "Nantes")
 
   expect_silent(trouver_l_elu_le_plus_age(df_Nantes_valide))  # Vérifie qu'il n'y a pas d'erreur
@@ -17,7 +17,7 @@ test_that("trouver_l_elu_le_plus_age fonctionne avec un schéma valide", {
 
 test_that("trouver_l_elu_le_plus_age renvoie l'élu le plus âgé", {
   # Utilisation du jeu de données df_Nantes_identique
-  df_Nantes_identique <- df_Gers_Loire_Atlantique |>
+  df_Nantes_identique <- df_gers_loire_atlantique |>
     dplyr::filter(`Libellé de la commune` == "Nantes")
 
   # Résultat attendu : un tibble avec l'élu le plus âgé

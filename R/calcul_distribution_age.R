@@ -1,10 +1,10 @@
 #' Calculer la distribution des âges
 #'
 #' @description
-#' Cette fonction calcule la distribution des âges des individus d'un data frame
+#' Cette fonction calcule la distribution des âges des individus d'un DataFrame
 #' en renvoyant des statistiques descriptives : minimum, quartiles, médiane, moyenne et maximum.
 #'
-#' @param df Un data frame contenant une colonne `Date de naissance` et
+#' @param df Un DataFrame contenant une colonne `Date de naissance` et
 #' une colonne `Libellé de la commune` ou `Libellé du département`.
 #'
 #' @param ... Paramètres supplémentaires (non utilisés directement dans cette fonction).
@@ -26,16 +26,16 @@
 #'
 #' # Données (villes ou départements)
 #'
-#' df_Nantes <- df_Gers_Loire_Atlantique |>
+#' df_Nantes <- df_gers_loire_atlantique |>
 #'   filter(`Libellé de la commune` == "Nantes")
 #'
-#' df_Aignan <- df_Gers_Loire_Atlantique |>
+#' df_Aignan <- df_gers_loire_atlantique |>
 #'   filter(`Libellé de la commune` == "Aignan")
 #'
-#' df_Loire_Atlantique <- df_Gers_Loire_Atlantique |>
+#' df_Loire_Atlantique <- df_gers_loire_atlantique |>
 #'   filter(`Libellé du département` == "Loire-Atlantique")
 #'
-#' df_Gers <- df_Gers_Loire_Atlantique |>
+#' df_Gers <- df_gers_loire_atlantique |>
 #'   filter(`Libellé du département` == "Gers")
 #'
 #'

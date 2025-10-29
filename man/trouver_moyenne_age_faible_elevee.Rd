@@ -7,7 +7,7 @@
 trouver_moyenne_age_faible_elevee(df)
 }
 \arguments{
-\item{df}{Un data frame contenant les informations sur les élus,
+\item{df}{Un DataFrame contenant les informations sur les élus,
 incluant les colonnes \verb{Libellé de la commune} et les informations nécessaires
 pour calculer la moyenne d’âge des élus par commune.}
 }
@@ -31,16 +31,16 @@ les moyennes d’âge les plus basses et les plus élevées.
 
 # Données (villes ou départements)
 
-df_Nantes <- df_Gers_Loire_Atlantique |>
+df_Nantes <- df_gers_loire_atlantique |>
   filter(`Libellé de la commune` == "Nantes")
 
-df_Aignan <- df_Gers_Loire_Atlantique |>
+df_Aignan <- df_gers_loire_atlantique |>
   filter(`Libellé de la commune` == "Aignan")
 
-df_Loire_Atlantique <- df_Gers_Loire_Atlantique |>
+df_Loire_Atlantique <- df_gers_loire_atlantique |>
   filter(`Libellé du département` == "Loire-Atlantique")
 
-df_Gers <- df_Gers_Loire_Atlantique |>
+df_Gers <- df_gers_loire_atlantique |>
   filter(`Libellé du département` == "Gers")
 
 

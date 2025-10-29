@@ -12,31 +12,59 @@ format:
     fig-width: 14
     fig-height: 10
     fig-align: "center"
+  pdf:
+    echo: true
+    eval: true
+    fig-width: 14
+    fig-height: 10
+    fig-align: "center"
 params:
   code_commune: 44109  # Valeur par défaut
   code_departement: 44  # Valeur par défaut
+  dataframe_name: df_gers_loire_atlantique # Valeur par défaut
+  dataframe_path: NULL
 ---
 
-### Chargement de la librairie et du data frame du package
+\newpage
+# Introduction
+
+Ce rapport propose une exploration statistique et graphique des données concernant les élus d’une commune et d’un département. Il vise à décrire leurs caractéristiques démographiques et socio-professionnelles à partir d’indicateurs synthétiques tels que la distribution des âges et la répartition par catégorie d’activité. Il applique automatiquement la même analyse à la commune et au département.
+
+
+\newpage
+# Installation et chargement du package
 
 ```{r}
-# Librairie
+# Installation depuis GitHub
+# remotes::install_github("floriancrochet/firstlibFlorian", quiet = TRUE)
+
+# Chargement
 library(firstlibFlorian)
-
-# Data frame
-data("df_Gers_Loire_Atlantique")
-
-# head(df_Gers_Loire_Atlantique)
 ```
 
 
-### Modification du code de manière à passer en paramètres le code commune et le code du département.
+\newpage
+# Chargement des données
 
 ```{r}
-# Fonction pour sélectionner une commune en utilisant son code commune
-# et associer la classe commune au data frame
+if (params$dataframe_name == "df_gers_loire_atlantique") {
+  # Jeu de données du package
+  data <- df_gers_loire_atlantique
+} else {
+  # Jeu de données en paramètre
+  data <- readRDS(normalizePath(params$dataframe_path, winslash = "/", mustWork = TRUE))
+}
+```
 
-selection_commune <- function(code_commune, df = df_Gers_Loire_Atlantique) {
+
+\newpage
+## Sélection d'une commune ou d'un département
+
+```{r}
+# Fonction qui extrait les données correspondant à une commune dans la base,
+# puis leur assigne la classe 'commune'
+
+selection_commune <- function(code_commune, df = data) {
   
   if (!(code_commune %in% df$`Code de la commune`)) {
     stop("Aucune commune trouvée avec ce code.")
@@ -50,11 +78,10 @@ selection_commune <- function(code_commune, df = df_Gers_Loire_Atlantique) {
 }
 
 
+# Fonction qui extrait les données correspondant à un département dans la base,
+# puis leur assigne la classe 'departement'
 
-# Fonction pour sélectionner un département en utilisant son code département
-# et associer la classe departement au data frame
-
-selection_departement <- function(code_departement, df = df_Gers_Loire_Atlantique) {
+selection_departement <- function(code_departement, df = data) {
   
   if (!(code_departement %in% df$`Code du département`)) {
     stop("Aucun département trouvé avec ce code.")
@@ -69,39 +96,65 @@ selection_departement <- function(code_departement, df = df_Gers_Loire_Atlantiqu
 ```
 
 
-### Commune
+\newpage
+# Commune
+
+## Sélection de la commune
 
 ```{r}
-# Sélection de la commune
-
 df_commune <- selection_commune(
   params$code_commune
 )
 ```
 
-```{r}
-# Utilisation de la fonction summary et plot pour df_commune
 
+\newpage
+## Statistiques de la commune
+
+```{r}
 summary(df_commune)
-
-plot(df_commune)
 ```
 
 
-### Département
+\newpage
+## Répartition des élus de la commune par catégorie socio-professionnelle
 
 ```{r}
-# Sélection du département
-
-df_departement <- selection_departement(
-  params$code_departement
-)
+plot_commune <- plot(df_commune)
+plot_commune$graphique_sans_legende
+plot_commune$legende
 ```
 
-```{r}
-# Utilisation des fonctions summary et plot pour df_departement
 
+\newpage
+# Département
+
+## Sélection du département
+
+```{r}
+df_departement <- selection_departement(params$code_departement)
+```
+
+
+\newpage
+## Statistiques du département
+
+```{r}
 summary(df_departement)
-
-plot(df_departement)
 ```
+
+
+\newpage
+## Répartition des élus du département par catégorie socio-professionnelle
+
+```{r}
+plot_departement <- plot(df_departement)
+plot_departement$graphique_sans_legende
+plot_departement$legende
+```
+
+
+\newpage
+# Conclusion
+
+L’analyse met en évidence la composition des élus au niveau de la commune et du département ainsi que les écarts éventuels entre ces deux niveaux. Elle offre une vision structurée des âges et des catégories d’activité, utile pour observer les spécificités locales. Grâce à sa conception paramétrable, le rapport assure une production uniforme et reproductible des résultats pour toute commune et tout département du jeu de données.

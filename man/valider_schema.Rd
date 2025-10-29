@@ -2,25 +2,22 @@
 % Please edit documentation in R/valider_schema.R
 \name{valider_schema}
 \alias{valider_schema}
-\title{Valider le schéma des données d'un data frame}
+\title{Valider le schéma des données d'un DataFrame}
 \usage{
 valider_schema(df)
 }
 \arguments{
-\item{df}{Un data frame contenant des informations sur les élus, qui doit avoir les colonnes suivantes :
-\verb{Code du département}, \verb{Libellé du département}, \verb{Code de la collectivité à statut particulier},
-\verb{Libellé de la collectivité à statut particulier}, \verb{Code de la commune}, \verb{Libellé de la commune},
-\verb{Nom de l'élu}, \verb{Prénom de l'élu}, \verb{Code sexe}, \verb{Date de naissance}, \verb{Code de la catégorie socio-professionnelle},
-\verb{Libellé de la catégorie socio-professionnelle}, \verb{Date de début du mandat}, \verb{Libellé de la fonction},
-\verb{Date de début de la fonction}, et \verb{Code nationalité}.}
+\item{df}{Un DataFrame, contenant des informations sur les élus, qui doit avoir au minimum les colonnes suivantes :
+\verb{Code du département}, \verb{Libellé du département}, \verb{Code de la commune}, \verb{Libellé de la commune},
+\verb{Nom de l'élu}, \verb{Prénom de l'élu}, \verb{Date de naissance}, \verb{Code de la catégorie socio-professionnelle},
+\verb{Libellé de la fonction}.}
 }
 \value{
-Aucun retour explicite. Si les colonnes du data frame ne correspondent pas au schéma, une erreur sera levée.
+Aucun retour explicite. Un message ou un avertissement est affiché si le schéma n’est pas respecté.
 }
 \description{
-Cette fonction vérifie que les colonnes du data frame sont conformes à un schéma prédéfini. Le schéma attendu inclut des colonnes spécifiques
-liées aux informations sur les élus, telles que le code et le libellé du département, le code sexe, les dates de naissance, et d'autres informations
-sur les élus et leurs fonctions.
+Cette fonction vérifie que les colonnes du DataFrame sont conformes à un schéma prédéfini. Le schéma attendu inclut des colonnes spécifiques
+liées aux informations sur les élus.
 }
 \examples{
 # Exemples d'utilisation
@@ -28,16 +25,16 @@ sur les élus et leurs fonctions.
 
 # Données (villes ou départements)
 
-df_Nantes <- df_Gers_Loire_Atlantique |>
+df_Nantes <- df_gers_loire_atlantique |>
   filter(`Libellé de la commune` == "Nantes")
 
-df_Aignan <- df_Gers_Loire_Atlantique |>
+df_Aignan <- df_gers_loire_atlantique |>
   filter(`Libellé de la commune` == "Aignan")
 
-df_Loire_Atlantique <- df_Gers_Loire_Atlantique |>
+df_Loire_Atlantique <- df_gers_loire_atlantique |>
   filter(`Libellé du département` == "Loire-Atlantique")
 
-df_Gers <- df_Gers_Loire_Atlantique |>
+df_Gers <- df_gers_loire_atlantique |>
   filter(`Libellé du département` == "Gers")
 
 
@@ -51,6 +48,6 @@ valider_schema(df_Loire_Atlantique)
 
 valider_schema(df_Gers)
 
-valider_schema(df_Gers_Loire_Atlantique)
+valider_schema(df_gers_loire_atlantique)
 }
 \keyword{internal}

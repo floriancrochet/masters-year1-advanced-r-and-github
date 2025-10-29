@@ -5,7 +5,7 @@
 #' notamment le nom de la commune, le nombre d'élus, la distribution des âges
 #' des élus, ainsi que le nom et l'âge de l'élu(e) le/la plus âgé(e).
 #'
-#' @param df Un data frame contenant des informations sur les élus d'une commune,
+#' @param df Un DataFrame contenant des informations sur les élus d'une commune,
 #' incluant les colonnes `Libellé de la commune` et `Date de naissance`.
 #' @param ... Arguments supplémentaires, non utilisés dans cette méthode.
 #'
@@ -23,14 +23,14 @@
 #'
 #' # Données (villes)
 #'
-#' df_Nantes <- df_Gers_Loire_Atlantique |>
+#' df_Nantes <- df_gers_loire_atlantique |>
 #'   filter(`Libellé de la commune` == "Nantes")
 #'
-#' df_Aignan <- df_Gers_Loire_Atlantique |>
+#' df_Aignan <- df_gers_loire_atlantique |>
 #'   filter(`Libellé de la commune` == "Aignan")
 #'
 #'
-#' # Data frames appartenant à la classe commune
+#' # DataFrames appartenant à la classe commune
 #'
 #' df_Nantes <- structure(df_Nantes, class = c("commune", class(df_Nantes)))
 #'

@@ -4,25 +4,40 @@
 \alias{generer_rapport}
 \title{Générer un rapport Quarto et le déplacer vers un chemin spécifié}
 \usage{
-generer_rapport(commune, departement, output)
+generer_rapport(commune, departement, output, df)
 }
 \arguments{
-\item{commune}{Un entier représentant le numéro de la commune à inclure dans le rapport.}
+\item{commune}{Une chaîne de caractères représentant le numéro de la commune à inclure dans le rapport.}
 
-\item{departement}{Un entier représentant le numéro du département à inclure dans le rapport.}
+\item{departement}{Une chaîne de caractères représentant le numéro du département à inclure dans le rapport.}
 
-\item{output}{Une chaîne de caractères représentant le chemin de destination où le fichier rapport doit être déplacé. Le fichier généré sera déplacé vers ce chemin sous le nom de \code{rapport.html}.}
+\item{output}{Une chaîne de caractères représentant le chemin de destination où le fichier rapport doit être déplacé.
+Le fichier généré sera déplacé vers ce chemin sous le nom de spécifié.}
+
+\item{df}{Un DataFrame contenant des informations sur les élus,}
 }
 \value{
-Aucun retour explicite. Le fichier \code{rapport.html} est généré et déplacé vers le chemin spécifié.
+Aucun retour. Le fichier rapport.html est généré et déplacé vers le chemin spécifié.
 }
 \description{
 Cette fonction génère un rapport Quarto en utilisant les paramètres \code{commune} et \code{departement} spécifiés.
-Après la génération, le fichier \code{rapport.html} est déplacé vers le chemin de destination spécifié par l'utilisateur.
+Après la génération, le fichier est déplacé vers le chemin de destination spécifié par l'utilisateur.
 }
 \examples{
-# Utilisation de la fonction pour générer un rapport pour la commune de Nantes (44109) et le département de Loire-Atlantique (44)
+# Exemples d'utilisation
 
-generer_rapport(44109, 44, "<votre chemin>/rapport_final.html")
+
+# Données
+
+data("df_gers_loire_atlantique")
+
+
+# Utilisation de la fonction
+
+# Générer un rapport pour Nantes (44109) et la Loire-Atlantique (44) en html
+# generer_rapport("44109", "44", "chemin/absolu/rapport_final.html", df_gers_loire_atlantique)
+
+# Générer un rapport pour Nantes (44109) et la Loire-Atlantique (44) en html
+# generer_rapport("44109", "44", "chemin/absolu/rapport_final.html", df_gers_loire_atlantique)
 
 }

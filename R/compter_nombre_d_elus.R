@@ -1,12 +1,12 @@
 #' Compter le nombre d'élus
 #'
 #' @description
-#' Cette fonction compte le nombre d'élus distincts dans un data frame en se basant
+#' Cette fonction compte le nombre d'élus distincts dans un DataFrame en se basant
 #' sur les colonnes `Nom de l'élu`, `Prénom de l'élu`, et `Date de naissance`.
 #'
-#' @param df Un data frame contenant les colonnes `Nom de l'élu`, `Prénom de l'élu`, et `Date de naissance` (type `character` pour les deux premières et `Date` pour la dernière).
+#' @param df Un DataFrame contenant les colonnes `Nom de l'élu`, `Prénom de l'élu`, et `Date de naissance` (type `character` pour les deux premières et `Date` pour la dernière).
 #'
-#' @return Un entier représentant le nombre d'élus distincts dans le data frame.
+#' @return Un entier représentant le nombre d'élus distincts dans le DataFrame.
 #'
 #' @importFrom dplyr filter select distinct
 #'
@@ -18,16 +18,16 @@
 #'
 #' # Données (villes ou départements)
 #'
-#' df_Nantes <- df_Gers_Loire_Atlantique |>
+#' df_Nantes <- df_gers_loire_atlantique |>
 #'   filter(`Libellé de la commune` == "Nantes")
 #'
-#' df_Aignan <- df_Gers_Loire_Atlantique |>
+#' df_Aignan <- df_gers_loire_atlantique |>
 #'   filter(`Libellé de la commune` == "Aignan")
 #'
-#' df_Loire_Atlantique <- df_Gers_Loire_Atlantique |>
+#' df_Loire_Atlantique <- df_gers_loire_atlantique |>
 #'   filter(`Libellé du département` == "Loire-Atlantique")
 #'
-#' df_Gers <- df_Gers_Loire_Atlantique |>
+#' df_Gers <- df_gers_loire_atlantique |>
 #'   filter(`Libellé du département` == "Gers")
 #'
 #'

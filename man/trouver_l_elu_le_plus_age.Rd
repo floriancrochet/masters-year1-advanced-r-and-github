@@ -7,11 +7,11 @@
 trouver_l_elu_le_plus_age(df)
 }
 \arguments{
-\item{df}{Un data frame contenant une colonne \verb{Date de naissance} au format \code{"jour/mois/année"},
+\item{df}{Un DataFrame contenant une colonne \verb{Date de naissance} au format \code{"jour/mois/année"},
 ainsi que les colonnes \verb{Nom de l'élu} et \verb{Prénom de l'élu}.}
 }
 \value{
-Un data frame avec les colonnes :
+Un DataFrame avec les colonnes :
 \itemize{
 \item \verb{Nom de l'élu} : Nom de l'élu le plus âgé.
 \item \verb{Prénom de l'élu} : Prénom de l'élu le plus âgé.
@@ -20,7 +20,7 @@ Un data frame avec les colonnes :
 }
 }
 \description{
-Cette fonction identifie l'élu le plus âgé dans un data frame,
+Cette fonction identifie l'élu le plus âgé dans un DataFrame,
 en calculant l'âge à partir de la date de naissance.
 }
 \examples{
@@ -29,16 +29,16 @@ en calculant l'âge à partir de la date de naissance.
 
 # Données (villes ou départements)
 
-df_Nantes <- df_Gers_Loire_Atlantique |>
+df_Nantes <- df_gers_loire_atlantique |>
   filter(`Libellé de la commune` == "Nantes")
 
-df_Aignan <- df_Gers_Loire_Atlantique |>
+df_Aignan <- df_gers_loire_atlantique |>
   filter(`Libellé de la commune` == "Aignan")
 
-df_Loire_Atlantique <- df_Gers_Loire_Atlantique |>
+df_Loire_Atlantique <- df_gers_loire_atlantique |>
   filter(`Libellé du département` == "Loire-Atlantique")
 
-df_Gers <- df_Gers_Loire_Atlantique |>
+df_Gers <- df_gers_loire_atlantique |>
   filter(`Libellé du département` == "Gers")
 
 

@@ -40,7 +40,7 @@ Cette fonction affiche un résumé des informations d'une commune,notamment le n
 
 
 ##### Paramètres
-**df** Un data frame contenant des informations sur les élus d'une commune,incluant les colonnes `Libellé de la commune` et `Date de naissance`.  
+**df** Un DataFrame contenant des informations sur les élus d'une commune,incluant les colonnes `Libellé de la commune` et `Date de naissance`.  
 **...** Arguments supplémentaires, non utilisés dans cette méthode.
 
 
@@ -57,14 +57,14 @@ Aucun retour explicite. La fonction affiche dans la console :
 ```{r}
 # Données (villes)
 
-df_Nantes <- df_Gers_Loire_Atlantique |>
+df_Nantes <- df_gers_loire_atlantique |>
   dplyr::filter(`Libellé de la commune` == "Nantes")
 
-df_Aignan <- df_Gers_Loire_Atlantique |>
+df_Aignan <- df_gers_loire_atlantique |>
   dplyr::filter(`Libellé de la commune` == "Aignan")
 
 
-# Data frames appartenant à la classe commune
+# DataFrames appartenant à la classe commune
 
 df_Nantes <- structure(df_Nantes, class = c("commune", class(df_Nantes)))
 
@@ -89,7 +89,7 @@ Cette fonction affiche un résumé des informations d'un département,notamment 
 
 ##### Paramètres
 
-**df** Un data frame contenant des informations sur les élus, incluant les colonnes `Libellé du département`, `Code de la commune`, et les informations nécessaires pour calculer la distribution des âges, trouver l’élu(e) le/la plus âgé(e) et le/la plus jeune, ainsi que la moyenne d’âge par commune.  
+**df** Un DataFrame contenant des informations sur les élus, incluant les colonnes `Libellé du département`, `Code de la commune`, et les informations nécessaires pour calculer la distribution des âges, trouver l’élu(e) le/la plus âgé(e) et le/la plus jeune, ainsi que la moyenne d’âge par commune.  
 **...** Arguments supplémentaires, non utilisés dans cette méthode.
 
 
@@ -109,14 +109,14 @@ Aucun retour explicite. La fonction affiche dans la console :
 ```{r}
 # Données (départements)
 
-df_Loire_Atlantique <- df_Gers_Loire_Atlantique |>
+df_Loire_Atlantique <- df_gers_loire_atlantique |>
   dplyr::filter(`Libellé du département` == "Loire-Atlantique")
 
-df_Gers <- df_Gers_Loire_Atlantique |>
+df_Gers <- df_gers_loire_atlantique |>
   dplyr::filter(`Libellé du département` == "Gers")
 
 
-# Data frames appartenant à la classe departement
+# DataFrames appartenant à la classe departement
 
 df_Loire_Atlantique <- structure(df_Loire_Atlantique, class = c("departement", class(df_Loire_Atlantique)))
 
