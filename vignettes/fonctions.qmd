@@ -14,32 +14,32 @@ Ce document présente les principales fonctions du package `firstlibflorian`.
 
 ### `creer_commune()`
 Cette fonction permet de créer un objet de classe `commune` à partir de données spécifiques.  
-Cliquez sur le nom de la fonction pour accéder à la [documentation complète](https://floriancrochet.github.io/firstlibflorian/reference/creer_commune.html).
+Cliquez sur le nom de la fonction pour accéder à la [documentation complète](https://floriancrochet.github.io/masters-year1-advanced-r-and-github/reference/creer_commune.html).
 
 ### `creer_departement()`
 Cette fonction permet de créer un objet de classe `departement`.  
-Cliquez sur le nom de la fonction pour accéder à la [documentation complète](https://floriancrochet.github.io/firstlibflorian/reference/creer_departement.html).
+Cliquez sur le nom de la fonction pour accéder à la [documentation complète](https://floriancrochet.github.io/masters-year1-advanced-r-and-github/reference/creer_departement.html).
 
 ### `generer_rapport()`
 Cette fonction génère un rapport à partir des données d'une commune ou d'un département.  
-Cliquez sur le nom de la fonction pour accéder à la [documentation complète](https://floriancrochet.github.io/firstlibflorian/reference/generer_rapport.html).
+Cliquez sur le nom de la fonction pour accéder à la [documentation complète](https://floriancrochet.github.io/masters-year1-advanced-r-and-github/reference/generer_rapport.html).
 
 ## Fonctions de visualisation
 
 ### `plot.commune()`
 Cette fonction génère un graphique de visualisation des données d'une commune.  
-Cliquez sur le nom de la fonction pour accéder à la [documentation complète](https://floriancrochet.github.io/firstlibflorian/reference/plot.commune.html).
+Cliquez sur le nom de la fonction pour accéder à la [documentation complète](https://floriancrochet.github.io/masters-year1-advanced-r-and-github/reference/plot.commune.html).
 
 ### `plot.departement()`
 Cette fonction génère un graphique de visualisation des données d'un département.  
-Cliquez sur le nom de la fonction pour accéder à la [documentation complète](https://floriancrochet.github.io/firstlibflorian/reference/plot.departement.html).
+Cliquez sur le nom de la fonction pour accéder à la [documentation complète](https://floriancrochet.github.io/masters-year1-advanced-r-and-github/reference/plot.departement.html).
 
 ## Fonctions de résumé
 
 ### `summary.commune()`
 Cette fonction génère un résumé statistique pour une commune.  
-Cliquez sur le nom de la fonction pour accéder à la [documentation complète](https://floriancrochet.github.io/firstlibflorian/reference/summary.commune.html).
+Cliquez sur le nom de la fonction pour accéder à la [documentation complète](https://floriancrochet.github.io/masters-year1-advanced-r-and-github/reference/summary.commune.html).
 
 ### `summary.departement()`
 Cette fonction génère un résumé statistique pour un département.  
-Cliquez sur le nom de la fonction pour accéder à la [documentation complète](https://floriancrochet.github.io/firstlibflorian/reference/summary.departement.html).
+Cliquez sur le nom de la fonction pour accéder à la [documentation complète](https://floriancrochet.github.io/masters-year1-advanced-r-and-github/reference/summary.departement.html).

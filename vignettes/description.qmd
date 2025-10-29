@@ -15,7 +15,7 @@ vignette: >
 - **Version** : 0.0.0.9000  
 - **Auteur** : Florian Crochet  
 - **Licence** : GPL-3  
-- **URL** : [https://floriancrochet.github.io/firstlibflorian/](https://floriancrochet.github.io/firstlibflorian/)  
+- **URL** : [https://floriancrochet.github.io/masters-year1-advanced-r-and-github/](https://floriancrochet.github.io/masters-year1-advanced-r-and-github/)  
 
 ## Fonctionnalités
 
@@ -62,4 +62,4 @@ Pour installer le package depuis GitHub :
 
 ```{r}
 # install.packages("devtools")
-devtools::install_github("floriancrochet/firstlibflorian")
+devtools::install_github("floriancrochet/masters-year1-advanced-r-and-github")

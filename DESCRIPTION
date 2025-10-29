@@ -29,4 +29,4 @@ Suggests:
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 VignetteBuilder: quarto
-URL: https://floriancrochet.github.io/firstlibflorian/
+URL: https://floriancrochet.github.io/masters-year1-advanced-r-and-github/
