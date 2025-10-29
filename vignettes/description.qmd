@@ -15,7 +15,7 @@ vignette: >
 - **Version** : 0.0.0.9000  
 - **Auteur** : Florian Crochet  
 - **Licence** : GPL-3  
-- **URL** : [https://flo-1-618.github.io/firstlibFlorian/](https://flo-1-618.github.io/firstlibFlorian/)  
+- **URL** : [https://floriancrochet.github.io/firstlibFlorian/](https://floriancrochet.github.io/firstlibFlorian/)  
 
 ## Fonctionnalités
 
@@ -62,4 +62,4 @@ Pour installer le package depuis GitHub :
 
 ```{r}
 # install.packages("devtools")
-devtools::install_github("flo-1-618/firstlibFlorian")
+devtools::install_github("floriancrochet/firstlibFlorian")
